@@ -1,6 +1,6 @@
 ---
 title: "Affiliations & Links"
-type: "page"
+type: "interior"
 mon: "結"
 eyebrow: "Community —"
 summary: "The federation and the wider Jundōkan network East Wind trains alongside."

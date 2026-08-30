@@ -1,6 +1,6 @@
 ---
 title: "Our Team"
-type: "page"
+type: "interior"
 mon: "師"
 eyebrow: "The Dojo —"
 summary: "Two chief instructors, and an instructor team built over more than a decade of teaching at Blossom Park."

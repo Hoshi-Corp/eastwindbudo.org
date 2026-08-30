@@ -1,6 +1,6 @@
 ---
 title: "Jujutsu — Lineage & Tradition"
-type: "page"
+type: "interior"
 mon: "柔"
 eyebrow: "Martial Arts —"
 summary: "Yamanaka-ha Shindō-ryū Jujutsu survived a century of near-disappearance to reach East Wind's floor today."

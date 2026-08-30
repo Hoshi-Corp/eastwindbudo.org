@@ -1,6 +1,6 @@
 ---
 title: "History & Mission"
-type: "page"
+type: "interior"
 mon: "道"
 eyebrow: "The Dojo —"
 summary: "East Wind has trained students at Blossom Park since 1995, on three simple ideas: movement, morality, and etiquette."

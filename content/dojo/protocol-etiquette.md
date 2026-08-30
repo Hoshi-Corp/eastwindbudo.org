@@ -1,6 +1,6 @@
 ---
 title: "Protocol & Etiquette"
-type: "page"
+type: "interior"
 mon: "礼"
 eyebrow: "The Dojo —"
 summary: "A short guide to the handful of customs every East Wind student picks up in their first few weeks — no memorization required."

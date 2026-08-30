@@ -1,6 +1,6 @@
 ---
 title: "The Dojo Kun"
-type: "page"
+type: "interior"
 mon: "訓"
 eyebrow: "Martial Arts — Karate —"
 summary: "The eight precepts recited at the start of class — the same eight lines karate students everywhere have carried for generations."
