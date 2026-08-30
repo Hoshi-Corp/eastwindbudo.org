@@ -1,0 +1,24 @@
+{{ if .Params.lineage }}
+<div class="lineage-list">
+  {{ range .Params.lineage }}
+  <div class="lineage-row">
+    <div class="l-name">{{ .name }}</div>
+    <div class="l-dates">{{ .dates }}</div>
+    <p class="l-desc">{{ .description }}</p>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
+{{ if .Params.precepts }}
+<div class="precepts-list">
+  {{ range .Params.precepts }}
+  <div class="precept-item">
+    <div class="p-num">{{ .num }}</div>
+    <div>
+      <div class="p-jp">{{ .jp }}</div>
+      <div class="p-en">{{ .en }}</div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

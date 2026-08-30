@@ -1,0 +1,8 @@
+<section class="interior-hero">
+  <div class="grain"></div>
+  {{ with .Params.mon }}<div class="mon-small" aria-hidden="true">{{ . }}</div>{{ end }}
+  {{ with .Params.eyebrow }}<span class="tag">{{ . }}</span>{{ end }}
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.summary }}<p class="hero-sub">{{ . | safeHTML }}</p>{{ end }}
+  {{ with .Params.breadcrumb_url }}<a class="back-link" href="{{ . }}">← {{ $.Params.breadcrumb_label | default "Back" }}</a>{{ end }}
+</section>

@@ -7,9 +7,14 @@ theme = "dojokun"
 canonifyURLs = false
 
 [params]
-  address = "2950 Bank St, Unit 1, Ottawa, ON"
+  address = "2950 Bank St, Unit 1, Blossom Park Shopping Centre, Ottawa, ON"
   phone_display = "613-282-6295"
   phone_tel = "6132826295"
+  phone_secondary_display = "613-878-6833"
+  phone_secondary_tel = "6138786833"
+  mailing_address = "4300 Goldeneye Way, Ottawa, ON, Canada K1V 2G8"
+  facebook_url = "https://www.facebook.com/EastwindMartialArtsOttawaSouth"
+  youtube_url = "https://www.youtube.com/channel/UCrNuWlxEbqnCtBpzWJ7UgEg"
   nav_schedule_label = "Schedule"
   nav_blog_label = "Blog"
   nav_cta_label = "Book a Trial Class"
@@ -21,7 +26,7 @@ canonifyURLs = false
 
 [[menu.utility]]
   name = "Schedule"
-  url = "/#p4"
+  url = "/schedule/"
   weight = 10
 
 [[menu.utility]]

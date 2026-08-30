@@ -1,0 +1,14 @@
+<div class="section-band band-washi-deep">
+  <div class="section-band-inner">
+    <div class="ledger">
+      {{ range site.Data.disciplines }}
+      <div class="ledger-row">
+        <div class="art-name">{{ .name }}</div>
+        <div class="art-desc">{{ .description }}</div>
+        <div class="art-best">{{ .ages }}</div>
+        <a class="art-link" href="{{ .link | default "#" }}">Lineage →</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

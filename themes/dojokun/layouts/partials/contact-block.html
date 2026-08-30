@@ -1,0 +1,26 @@
+<div class="section-band band-dusk">
+  <div class="section-band-inner">
+    <div class="contact-grid">
+      <div class="contact-block">
+        <h3>Visit</h3>
+        <p>{{ site.Params.address }}</p>
+      </div>
+      <div class="contact-block">
+        <h3>Call</h3>
+        <p><a href="tel:{{ site.Params.phone_tel }}">{{ site.Params.phone_display }}</a></p>
+        {{ with site.Params.phone_secondary_display }}
+        <p><a href="tel:{{ site.Params.phone_secondary_tel }}">{{ . }}</a></p>
+        {{ end }}
+      </div>
+      <div class="contact-block">
+        <h3>Write</h3>
+        <p>{{ site.Params.mailing_address }}</p>
+      </div>
+      <div class="contact-block">
+        <h3>Follow</h3>
+        {{ with site.Params.facebook_url }}<p><a href="{{ . }}" target="_blank" rel="noopener">Facebook</a></p>{{ end }}
+        {{ with site.Params.youtube_url }}<p><a href="{{ . }}" target="_blank" rel="noopener">YouTube</a></p>{{ end }}
+      </div>
+    </div>
+  </div>
+</div>

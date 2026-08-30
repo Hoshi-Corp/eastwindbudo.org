@@ -1,0 +1,17 @@
+<div class="section-band band-washi">
+  <div class="section-band-inner">
+    <div class="team-grid">
+      {{ range site.Data.team.members }}
+      <div class="team-card">
+        <h3>{{ .name }}</h3>
+        <div class="role">{{ .role }}</div>
+        <div class="rank">{{ .rank }}</div>
+        <ul>
+          {{ range .details }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+    {{ with site.Data.team.note }}<p class="schedule-footnote">{{ . }}</p>{{ end }}
+  </div>
+</div>

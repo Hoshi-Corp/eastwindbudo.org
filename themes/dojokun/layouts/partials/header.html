@@ -4,9 +4,33 @@
   <div class="logo-mark">
     <a href="{{ "/" | relLangURL }}"><img src="/images/logo.png" alt="{{ site.Title }}"></a>
   </div>
-  <nav class="util-nav">
-    <a href="{{ $homeAnchor }}#p4">{{ site.Params.nav_schedule_label | default "Schedule" }}</a>
+  <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="utilNav" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="util-nav" id="utilNav">
+    <div class="nav-item">
+      <a href="/dojo/">The Dojo</a>
+      <button class="nav-caret" type="button" aria-expanded="false" aria-label="Show Dojo submenu">▾</button>
+      <div class="dropdown">
+        <a href="/dojo/">History &amp; Mission</a>
+        <a href="/dojo/protocol-etiquette/">Protocol &amp; Etiquette</a>
+        <a href="/dojo/team/">Our Team</a>
+        <a href="/dojo/virtual/">Virtual Dojo</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="/martial-arts/">Martial Arts</a>
+      <button class="nav-caret" type="button" aria-expanded="false" aria-label="Show Martial Arts submenu">▾</button>
+      <div class="dropdown">
+        <a href="/martial-arts/karate/">Karate</a>
+        <a href="/martial-arts/kobudo/">Kobudo</a>
+        <a href="/martial-arts/shaolin-kung-fu/">Shaolin Kung Fu</a>
+        <a href="/martial-arts/jujutsu/">Jujutsu</a>
+      </div>
+    </div>
+    <a href="/schedule/">{{ site.Params.nav_schedule_label | default "Schedule" }}</a>
     <a href="/posts/">{{ site.Params.nav_blog_label | default "Blog" }}</a>
+    <a href="/contact/">Contact</a>
     <a class="cta" href="{{ $homeAnchor }}#p5">{{ site.Params.nav_cta_label | default "Book a Trial Class" }}</a>
   </nav>
 </header>

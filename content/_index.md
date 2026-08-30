@@ -1,5 +1,6 @@
 ---
 title: "Home"
+aliases: ["/home/"]
 
 hero_eyebrow: "Ottawa · Blossom Park — Traditional Martial Arts"
 hero_title: "Karate. Kobudo. Kung Fu. Jujutsu. Taught right, for every age."

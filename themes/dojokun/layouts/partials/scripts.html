@@ -14,4 +14,22 @@
   }
   document.addEventListener('scroll', onScroll, { passive:true });
   onScroll();
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const utilNav = document.getElementById('utilNav');
+  if (navToggle && utilNav) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = utilNav.classList.toggle('open');
+      navToggle.classList.toggle('is-active', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+  document.querySelectorAll('.nav-caret').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.nav-item');
+      const isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
 </script>

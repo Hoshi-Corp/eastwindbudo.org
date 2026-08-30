@@ -1,0 +1,16 @@
+<div class="section-band band-washi">
+  <div class="section-band-inner">
+    <div class="affil-groups">
+      {{ range site.Data.affiliations.groups }}
+      <div class="affil-group">
+        <h3>{{ .name }}</h3>
+        <ul>
+          {{ range .links }}
+          <li><a href="{{ .url }}" target="_blank" rel="noopener nofollow">{{ .label }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
