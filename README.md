@@ -6,13 +6,21 @@ ported 1:1 from the approved `eastwind-visual-proposal-v4.html` mockup.
 ## What's editable without touching code
 
 - **Homepage copy** — `content/_index.md` (hero text, all 5 precept headings/ledes, final CTA)
-- **Disciplines list** (the "Practice" ledger) — `data/disciplines.yaml`
-- **Weekly schedule board** — `data/schedule.yaml`
+- **Disciplines list** (the "Practice" ledger, and the `/martial-arts/` ledger) — `data/disciplines.yaml`
+- **Weekly schedule board** (homepage summary) — `data/schedule.yaml`
+- **Full weekly schedule** (the `/schedule/` page) — `data/fullschedule.yaml`
+- **Team bios** (the `/dojo/team/` page) — `data/team.yaml`
+- **Affiliations & links** (the `/community/affiliations/` page) — `data/affiliations.yaml`
+- **Interior pages** (The Dojo, Martial Arts, Schedule, Contact) — Markdown files under
+  `content/dojo/`, `content/martial-arts/`, `content/schedule.md`, and `content/contact.md`.
+  Each uses `type: "page"` front matter and renders through `layouts/page/list.html` (for
+  section pages with children) or `layouts/page/single.html` (for leaf pages).
 - **Blog posts** — add a new `.md` file under `content/posts/`. The homepage
   automatically shows the 3 most recent posts. Add `image: "/images/yourphoto.jpg"`
   to a post's front matter to get the large photo-tile treatment (used for
   "Graduation day: new belts").
-- **Site-wide settings** (address, phone, nav labels) — `hugo.toml`, under `[params]`
+- **Site-wide settings** (address, phone, mailing address, social links, nav labels) —
+  `hugo.toml`, under `[params]`
 
 ## One known asset issue
 
@@ -133,9 +141,17 @@ hugo.toml                    Site config (title, params, menus)
 content/
   _index.md                  Homepage copy (front matter drives every section)
   posts/                     Blog posts (Community precept + /posts/ listing)
+  dojo/                      History & Mission, Protocol & Etiquette, Our Team, Virtual Dojo
+  martial-arts/              Martial Arts hub + Karate, Kobudo, Shaolin Kung Fu, Jujutsu
+  schedule.md                Full weekly schedule page
+  contact.md                 Contact page
+  community/affiliations.md  Affiliations & links page
 data/
-  disciplines.yaml           The 4 martial arts (Practice precept ledger)
-  schedule.yaml              Weekly class schedule (Schedule precept board)
+  disciplines.yaml           The 4 martial arts (Practice precept ledger + /martial-arts/ ledger)
+  schedule.yaml              Weekly class schedule (Schedule precept board, homepage summary)
+  fullschedule.yaml          Full day-by-day schedule (/schedule/ page)
+  team.yaml                  Instructor bios (/dojo/team/ page)
+  affiliations.yaml          Federation & network links (/community/affiliations/ page)
 static/
   images/                    Logo files + real dojo photos (unchanged assets)
 archetypes/
@@ -148,9 +164,13 @@ themes/dojokun/
     _default/single.html     Blog post page
     _default/list.html       /posts/ listing page
     index.html               Homepage (assembles the 5 precept partials)
+    page/single.html         Interior leaf pages (Contact, Schedule, Team, etc.)
+    page/list.html           Interior section pages (The Dojo, Martial Arts, etc.)
     partials/
       head.html, header.html, footer.html, scripts.html, enso.html, hero.html
       precepts/welcome.html, practice.html, floor.html, schedule.html, community.html
+      page-hero.html, content-extras.html, ledger-block.html, team-cards.html,
+      full-schedule.html, contact-block.html, affiliations-block.html
 ```
 
 ## Not yet done (flagged from the design review)
@@ -161,10 +181,17 @@ themes/dojokun/
 - Additional real action photos (kids' class, kobudo drill, instructor
   mid-kata) would let real imagery replace any remaining generic elements
   in future discipline-specific pages, if those get built out.
-- Per-discipline detail pages: the "Lineage →" links in the Practice ledger
-  currently point to `#` placeholders. Building these out (one page per
-  discipline) is a natural next step but was left out of this pass to avoid
-  scope creep — happy to build it whenever it's wanted.
+- Lineage portrait photos for the Karate, Kobudo, and Shaolin Kung Fu pages
+  couldn't be downloaded during the content migration (no outbound network
+  access to the old WordPress media library at the time). See
+  `MIGRATION_NOTES.md` for the source URLs and where they'd need to go.
+- The `/contact/` page has no email address — the old site's address was
+  behind an obfuscation script that couldn't be decoded reliably. Add the
+  real address to `contact-block.html` / `hugo.toml` once you have it.
+- `/community/affiliations/` was curated down from the old site's 37-link
+  directory to the 12 most current ones (federation + Jundōkan network).
+  The full original list is noted in `MIGRATION_NOTES.md` if it should be
+  restored in full or added as a "legacy links" appendix.
 
 ## SEO / sharing polish included in this pass
 

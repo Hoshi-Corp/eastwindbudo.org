@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+<article class="post-body">
+  {{ .Content }}
+  {{ partial "content-extras.html" . }}
+</article>
+{{ if .Params.show_ledger }}{{ partial "ledger-block.html" . }}{{ end }}
+{{ if .Pages }}
+<section class="children-section">
+  <p class="section-label">{{ .Params.children_title | default "Explore Further" }}</p>
+  <div class="list-grid">
+    {{ range .Pages.ByWeight }}
+    <a class="post" href="{{ .RelPermalink }}">
+      {{ with .Params.eyebrow }}<span class="tag">{{ . }}</span>{{ end }}
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Params.summary | default .Summary }}</p>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}
