@@ -1,6 +1,6 @@
 ---
 title: "Jujutsu Curriculum"
-type: "page"
+type: "interior"
 mon: "段"
 eyebrow: "Martial Arts — Jujutsu —"
 summary: "Two systems, one floor: a modern kyu/dan curriculum, and the classical menkyo licensing structure behind Yamanaka-ha Shindō-ryū."

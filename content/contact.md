@@ -1,6 +1,6 @@
 ---
 title: "Contact Us"
-type: "page"
+type: "interior"
 mon: "縁"
 eyebrow: "Get In Touch —"
 summary: "2950 Bank St, Unit 1 — Blossom Park Shopping Centre, Ottawa."

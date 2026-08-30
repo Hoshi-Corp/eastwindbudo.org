@@ -1,6 +1,6 @@
 ---
 title: "Virtual Dojo"
-type: "page"
+type: "interior"
 mon: "遠"
 eyebrow: "The Dojo —"
 summary: "Can't make it to Blossom Park? Train with us anyway — all you need is a phone, a tablet, or a computer."

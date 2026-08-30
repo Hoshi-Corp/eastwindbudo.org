@@ -1,6 +1,6 @@
 ---
 title: "Shaolin Kung Fu — Lineage & Tradition"
-type: "page"
+type: "interior"
 mon: "拳"
 eyebrow: "Martial Arts —"
 summary: "From a monastery founded in 495 A.D. in Henan Province, to the first instructor to bring the art to Canada in 1962."

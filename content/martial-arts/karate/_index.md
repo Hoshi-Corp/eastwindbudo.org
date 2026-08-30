@@ -1,6 +1,6 @@
 ---
 title: "Karate — Lineage & Tradition"
-type: "page"
+type: "interior"
 mon: "空"
 eyebrow: "Martial Arts —"
 summary: "Our Gōjū-ryū karate traces four generations, from Higaonna Kanryō's return from Fuzhou in 1881 to the instructors teaching at Blossom Park today."

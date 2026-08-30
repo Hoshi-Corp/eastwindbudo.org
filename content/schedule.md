@@ -1,6 +1,6 @@
 ---
 title: "Weekly Schedule"
-type: "page"
+type: "interior"
 mon: "週"
 eyebrow: "Plan Your Week —"
 summary: "Kids' classes, adult classes, and open floor time throughout the week, plus private instruction by request."

@@ -1,6 +1,6 @@
 ---
 title: "Kobudo Instructor Certification Program"
-type: "page"
+type: "interior"
 mon: "証"
 eyebrow: "Martial Arts — Kobudo —"
 summary: "The Okinawa Kobudo Dōshi Rensei-kai's path to a shodan-level teaching certification, for school owners and advanced students alike."

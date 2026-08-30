@@ -1,6 +1,6 @@
 ---
 title: "Kobudo — Lineage & Tradition"
-type: "page"
+type: "interior"
 mon: "古"
 eyebrow: "Martial Arts —"
 summary: "Okinawan weapons training, carried from Matayoshi Shinkō's early-1900s travels through China to the Okinawa Kobudo Dōshi Rensei-kai today."
