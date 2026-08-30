@@ -1,0 +1,7 @@
+name = "dojokun"
+license = "custom"
+description = "The Dojo Kun — a five-precept scroll-driven theme built for East Wind Budo Life Center."
+min_version = "0.128.0"
+
+[author]
+  name = "East Wind Budo"

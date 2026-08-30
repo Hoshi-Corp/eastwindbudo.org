@@ -1,0 +1,29 @@
+columns:
+  - "Mon / Wed"
+  - "Tue / Thu"
+  - "Saturday"
+
+rows:
+  - discipline: "Karate"
+    cells:
+      - name: "Kids Karate"
+        time: "5:30 – 6:15 PM"
+      - name: "Adult Gojuryu"
+        time: "7:00 – 8:15 PM"
+      - name: "All Ranks"
+        time: "10:00 – 11:00 AM"
+
+  - discipline: "Kobudo"
+    cells:
+      - name: "Weapons Drill"
+        time: "6:30 – 7:00 PM"
+      - null
+      - name: "Open Floor"
+        time: "11:00 – 11:45 AM"
+
+  - discipline: "Jujutsu"
+    cells:
+      - null
+      - name: "Fundamentals"
+        time: "6:00 – 7:00 PM"
+      - null

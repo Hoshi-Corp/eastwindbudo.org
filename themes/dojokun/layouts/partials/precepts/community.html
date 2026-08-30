@@ -1,0 +1,46 @@
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ $posts = $posts.ByDate.Reverse }}
+{{ $latest := first 3 $posts }}
+<section class="precept" id="p5">
+  <div class="grain"></div>
+  <div class="precept-grid">
+    <div class="rail">{{ .Params.community_rail | default "Community" }}</div>
+    <div class="stamp-col">
+      <div class="stamp"><span>五</span></div>
+      <div class="hitotsu">Hitotsu —</div>
+    </div>
+    <div class="precept-body">
+      <h2>{{ .Params.community_title }}</h2>
+      <p class="lede">{{ .Params.community_lede | safeHTML }}</p>
+      <div class="posts">
+        {{ range $latest }}
+        {{ if .Params.image }}
+        <a class="post post-photo" href="{{ .RelPermalink }}">
+          <div class="post-photo-img"><img src="{{ .Params.image }}" alt="{{ .Params.image_alt | default .Title }}"></div>
+          <div class="post-photo-body">
+            <span class="tag">{{ .Params.tag }}</span>
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.summary | default .Summary }}</p>
+          </div>
+        </a>
+        {{ else }}
+        <a class="post" href="{{ .RelPermalink }}">
+          <span class="tag">{{ .Params.tag }}</span>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.summary | default .Summary }}</p>
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="cta-final">
+    <span class="hitotsu">{{ .Params.cta_final_eyebrow | default "Get Started —" }}</span>
+    <h2>{{ .Params.cta_final_title }}</h2>
+    <p>{{ .Params.cta_final_text }}</p>
+    <div class="cta-buttons">
+      <a class="btn btn-primary" href="{{ .Params.cta_final_primary_url | default "#" }}">{{ .Params.cta_final_primary | default "Book a Trial Class" }}</a>
+      <a class="btn btn-ghost" href="tel:{{ site.Params.phone_tel }}">Call {{ site.Params.phone_display }}</a>
+    </div>
+  </div>
+</section>

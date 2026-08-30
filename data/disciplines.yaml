@@ -1,0 +1,19 @@
+- name: "Gojuryu Karate"
+  description: "Traditional Okinawan karate — striking, forms, and sparring, built on hard and soft movement in balance."
+  ages: "Ages 6+"
+  link: "#"
+
+- name: "Kobudo"
+  description: "Traditional Okinawan weapons training — bo, sai, and nunchaku — usually paired with karate."
+  ages: "Teens & adults"
+  link: "#"
+
+- name: "Shaolin Kung Fu"
+  description: "A traditional Chinese striking art built on fluid, powerful movement and centuries of practice."
+  ages: "Teens & adults"
+  link: "#"
+
+- name: "Jujutsu"
+  description: "Grappling and real self-defense — using an opponent's own force and motion against them."
+  ages: "Ages 10+"
+  link: "#"

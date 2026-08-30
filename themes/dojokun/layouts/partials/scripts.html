@@ -1,0 +1,17 @@
+<script>
+  const header = document.getElementById('siteHeader');
+  const ensoFill = document.getElementById('ensoFill');
+  const CIRC = 314;
+  const GAP_FRACTION = 0.04; // enso never fully closes
+
+  function onScroll(){
+    const scrollTop = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const frac = max > 0 ? Math.min(scrollTop / max, 1) : 0;
+    const drawn = frac * (1 - GAP_FRACTION);
+    ensoFill.setAttribute('stroke-dashoffset', CIRC * (1 - drawn));
+    header.classList.toggle('solid', scrollTop > 60);
+  }
+  document.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+</script>

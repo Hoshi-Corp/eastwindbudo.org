@@ -1,0 +1,30 @@
+baseURL = "https://eastwindbudo.org/"
+languageCode = "en-ca"
+title = "East Wind Budo Life Center"
+theme = "dojokun"
+
+# Pretty URLs, no index.html suffix needed
+canonifyURLs = false
+
+[params]
+  address = "2950 Bank St, Unit 1, Ottawa, ON"
+  phone_display = "613-282-6295"
+  phone_tel = "6132826295"
+  nav_schedule_label = "Schedule"
+  nav_blog_label = "Blog"
+  nav_cta_label = "Book a Trial Class"
+  description = "Traditional martial arts in Ottawa's Blossom Park — Gojuryu Karate, Kobudo, Shaolin Kung Fu, and Jujutsu for kids, teens, and adults. Book a free trial class."
+  social_image = "/images/dojo-floor-duotone.jpg"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[[menu.utility]]
+  name = "Schedule"
+  url = "/#p4"
+  weight = 10
+
+[[menu.utility]]
+  name = "Blog"
+  url = "/posts/"
+  weight = 20

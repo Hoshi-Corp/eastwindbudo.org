@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="post-hero">
+  {{ with .Params.tag }}<span class="tag">{{ . }}</span>{{ end }}
+  <h1>{{ .Title }}</h1>
+  <div class="meta">{{ .Date.Format "January 2, 2006" }}</div>
+</section>
+<article class="post-body">
+  <a class="back-link" href="/posts/">← Back to Community</a>
+  {{ with .Params.image }}
+  <img src="{{ . }}" alt="{{ $.Params.image_alt | default $.Title }}">
+  {{ end }}
+  {{ .Content }}
+</article>
+{{ end }}

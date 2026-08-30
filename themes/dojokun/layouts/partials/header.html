@@ -1,0 +1,12 @@
+{{ $homeAnchor := "" }}
+{{ if not .IsHome }}{{ $homeAnchor = "/" }}{{ end }}
+<header id="siteHeader"{{ if not .IsHome }} class="force-solid"{{ end }}>
+  <div class="logo-mark">
+    <a href="{{ "/" | relLangURL }}"><img src="/images/logo.png" alt="{{ site.Title }}"></a>
+  </div>
+  <nav class="util-nav">
+    <a href="{{ $homeAnchor }}#p4">{{ site.Params.nav_schedule_label | default "Schedule" }}</a>
+    <a href="/posts/">{{ site.Params.nav_blog_label | default "Blog" }}</a>
+    <a class="cta" href="{{ $homeAnchor }}#p5">{{ site.Params.nav_cta_label | default "Book a Trial Class" }}</a>
+  </nav>
+</header>

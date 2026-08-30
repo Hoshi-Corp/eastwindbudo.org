@@ -1,0 +1,11 @@
+<section class="hero">
+  <div class="mon">{{ .Params.hero_mon | default "武" }}</div>
+  <div class="hero-eyebrow">{{ .Params.hero_eyebrow }}</div>
+  <h1>{{ .Params.hero_title }}</h1>
+  <p>{{ .Params.hero_description }}</p>
+  <div class="hero-ctas">
+    <a class="btn btn-primary" href="{{ .Params.hero_cta_primary_url | default "#p5" }}">{{ .Params.hero_cta_primary | default "Book a Free Trial Class" }}</a>
+    <a class="btn btn-ghost" href="{{ .Params.hero_cta_secondary_url | default "#p4" }}">{{ .Params.hero_cta_secondary | default "See This Week's Schedule" }}</a>
+  </div>
+  <a class="scroll-cue" href="#p1"><span>{{ .Params.hero_scroll_cue | default "Meet the dojo" }}</span><span class="line"></span></a>
+</section>

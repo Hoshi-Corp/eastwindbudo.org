@@ -1,0 +1,24 @@
+<section class="precept" id="p2">
+  <div class="grain"></div>
+  <div class="precept-grid">
+    <div class="rail">{{ .Params.practice_rail | default "Practice" }}</div>
+    <div class="stamp-col">
+      <div class="stamp"><span>二</span></div>
+      <div class="hitotsu">Hitotsu —</div>
+    </div>
+    <div class="precept-body">
+      <h2>{{ .Params.practice_title }}</h2>
+      <p class="lede">{{ .Params.practice_lede | safeHTML }}</p>
+      <div class="ledger">
+        {{ range site.Data.disciplines }}
+        <div class="ledger-row">
+          <div class="art-name">{{ .name }}</div>
+          <div class="art-desc">{{ .description }}</div>
+          <div class="art-best">{{ .ages }}</div>
+          <a class="art-link" href="{{ .link | default "#" }}">Lineage →</a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

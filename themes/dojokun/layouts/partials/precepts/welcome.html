@@ -1,0 +1,16 @@
+<section class="precept" id="p1">
+  <div class="grain"></div>
+  <div class="precept-grid">
+    <div class="rail">{{ .Params.welcome_rail | default "Welcome" }}</div>
+    <div class="stamp-col">
+      <div class="stamp"><span>一</span></div>
+      <div class="hitotsu">Hitotsu —</div>
+    </div>
+    <div class="precept-body">
+      <h2>{{ .Params.welcome_title }}</h2>
+      {{ range .Params.welcome_lede }}
+      <p class="lede">{{ . | safeHTML }}</p>
+      {{ end }}
+    </div>
+  </div>
+</section>
