@@ -128,7 +128,7 @@ No server restart is needed — it's all static files served by nginx.
 
 ## Project structure
 
-```
+```text
 hugo.toml                    Site config (title, params, menus)
 content/
   _index.md                  Homepage copy (front matter drives every section)

@@ -1,0 +1,8 @@
+{
+  // Hugo content: titles/H1 come from front matter, not the Markdown body.
+  "MD041": false,
+  // Prose paragraphs aren't hard-wrapped at a fixed column.
+  "MD013": false,
+  // Hugo content uses raw HTML (goldmark unsafe = true in hugo.toml).
+  "MD033": false
+}
