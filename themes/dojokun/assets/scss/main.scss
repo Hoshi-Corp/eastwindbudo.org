@@ -244,7 +244,7 @@ header.solid, header.force-solid{ background:rgba(233,226,210,0.94); backdrop-fi
 .btn-ghost{ border:1px solid rgba(233,226,210,0.4); color:var(--washi); }
 
 footer{ background:var(--sumi); color:rgba(233,226,210,0.55); padding:34px 32px; text-align:center; }
-footer img{ height:34px; margin:0 auto 14px; filter:invert(1) brightness(1.6); }
+footer img{ height:34px; margin:0 auto 14px; }
 footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
 
 /* ---------------- SINGLE POST / BLOG LIST ---------------- */

@@ -2,7 +2,7 @@
 {{ if not .IsHome }}{{ $homeAnchor = "/" }}{{ end }}
 <header id="siteHeader"{{ if not .IsHome }} class="force-solid"{{ end }}>
   <div class="logo-mark">
-    <a href="{{ "/" | relLangURL }}"><img src="/images/logo.png" alt="{{ site.Title }}"></a>
+    <a href="{{ "/" | relLangURL }}"><img src="/images/logo.svg" alt="{{ site.Title }}"></a>
   </div>
   <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="utilNav" aria-label="Open menu">
     <span></span><span></span><span></span>
