@@ -7,8 +7,7 @@ ported 1:1 from the approved `eastwind-visual-proposal-v4.html` mockup.
 
 - **Homepage copy** — `content/_index.md` (hero text, all 5 precept headings/ledes, final CTA)
 - **Disciplines list** (the "Practice" ledger, and the `/martial-arts/` ledger) — `data/disciplines.yaml`
-- **Weekly schedule board** (homepage summary) — `data/schedule.yaml`
-- **Full weekly schedule** (the `/schedule/` page) — `data/fullschedule.yaml`
+- **Weekly schedule** (homepage Schedule precept, and the `/schedule/` page) — `data/fullschedule.yaml`
 - **Team bios** (the `/dojo/team/` page) — `data/team.yaml`
 - **Affiliations & links** (the `/community/affiliations/` page) — `data/affiliations.yaml`
 - **Interior pages** (The Dojo, Martial Arts, Schedule, Contact) — Markdown files under
@@ -149,8 +148,7 @@ content/
   community/affiliations.md  Affiliations & links page
 data/
   disciplines.yaml           The 4 martial arts (Practice precept ledger + /martial-arts/ ledger)
-  schedule.yaml              Weekly class schedule (Schedule precept board, homepage summary)
-  fullschedule.yaml          Full day-by-day schedule (/schedule/ page)
+  fullschedule.yaml          Full day-by-day schedule (Schedule precept board on the homepage, and /schedule/ page)
   team.yaml                  Instructor bios (/dojo/team/ page)
   affiliations.yaml          Federation & network links (/community/affiliations/ page)
 static/
