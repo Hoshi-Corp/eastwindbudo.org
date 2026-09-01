@@ -7,7 +7,11 @@ ported 1:1 from the approved `eastwind-visual-proposal-v4.html` mockup.
 
 - **Homepage copy** — `content/_index.md` (hero text, all 5 precept headings/ledes, final CTA)
 - **Disciplines list** (the "Practice" ledger, and the `/martial-arts/` ledger) — `data/disciplines.yaml`
-- **Weekly schedule** (homepage Schedule precept, and the `/schedule/` page) — `data/fullschedule.yaml`
+- **Weekly schedule** — `data/fullschedule.yaml`. Both the homepage Schedule
+  precept and the `/schedule/` page render this same file through one shared
+  component, `partials/schedule-board.html` (`Variant: "compact"` and
+  `"full"` respectively) — updating the schedule is always just a YAML edit,
+  never a template or markdown change.
 - **Team bios** (the `/dojo/team/` page) — `data/team.yaml`
 - **Affiliations & links** (the `/community/affiliations/` page) — `data/affiliations.yaml`
 - **Interior pages** (The Dojo, Martial Arts, Schedule, Contact) — Markdown files under
@@ -169,7 +173,7 @@ themes/dojokun/
       head.html, header.html, footer.html, scripts.html, enso.html, hero.html
       precepts/welcome.html, practice.html, floor.html, schedule.html, community.html
       page-hero.html, content-extras.html, ledger-block.html, team-cards.html,
-      full-schedule.html, contact-block.html, affiliations-block.html
+      schedule-board.html, contact-block.html, affiliations-block.html
 ```
 
 ## Not yet done (flagged from the design review)
