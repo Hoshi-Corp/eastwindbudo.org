@@ -5,7 +5,7 @@
   {{ partial "content-extras.html" . }}
 </article>
 {{ if .Params.show_team }}{{ partial "team-cards.html" . }}{{ end }}
-{{ if .Params.show_full_schedule }}{{ partial "full-schedule.html" . }}{{ end }}
+{{ if .Params.show_full_schedule }}{{ partial "schedule-board.html" (dict "Schedule" site.Data.fullschedule "Variant" "full") }}{{ end }}
 {{ if .Params.show_contact }}{{ partial "contact-block.html" . }}{{ end }}
 {{ if .Params.show_affiliations }}{{ partial "affiliations-block.html" . }}{{ end }}
 {{ end }}

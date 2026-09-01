@@ -1,0 +1,59 @@
+{{/*
+  schedule-board.html — renders the weekly class schedule straight from
+  data/fullschedule.yaml. This is the single component both places on the
+  site use to show the schedule; editing the schedule only ever means
+  editing that YAML file, never this template or any page content.
+
+  Params (pass as a dict):
+    Schedule — the data to render (site.Data.fullschedule)
+    Variant  — "compact" (homepage precept board) or "full" (the /schedule/
+               page's stacked day list, with off-days & footnote). Defaults
+               to "full".
+*/}}
+{{ $schedule := .Schedule }}
+{{ $variant := .Variant | default "full" }}
+{{ if eq $variant "compact" }}
+<div class="board-days">
+  {{ range $schedule.days }}
+  <div class="board-day">
+    <div class="board-day-name">{{ .day }}{{ with .note }} <span class="day-note">({{ . }})</span>{{ end }}</div>
+    <div class="board-day-classes">
+      {{ range .classes }}
+      <div class="board-class">
+        <span class="cname">{{ .name }}</span>
+        {{ with .note }}<span class="clevel">{{ . }}</span>{{ end }}
+        <span class="ctime">{{ .time }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ else }}
+<div class="section-band band-sumi-soft">
+  <div class="section-band-inner">
+    <div class="day-schedule">
+      {{ range $schedule.days }}
+      <div class="day-row">
+        <div class="day-name">{{ .day }}{{ with .note }} <span class="day-note">({{ . }})</span>{{ end }}</div>
+        <div class="day-classes">
+          {{ range .classes }}
+          <div class="class-line">
+            <span class="cl-name">{{ .name }}</span>
+            <span class="cl-time">{{ .time }}</span>
+            {{ with .note }}<span class="cl-note">{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ with $schedule.off_days }}
+    <p class="off-days-note">No scheduled classes: {{ delimit . ", " }}</p>
+    {{ end }}
+    {{ with $schedule.footnote }}
+    <p class="schedule-footnote">{{ . }}</p>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

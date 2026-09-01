@@ -9,28 +9,7 @@
     <div class="precept-body">
       <h2>{{ .Params.schedule_title }}</h2>
       <p class="lede">{{ .Params.schedule_lede | safeHTML }}</p>
-      <div class="board">
-        <div class="board-row head">
-          <div class="board-cell"></div>
-          {{ range site.Data.schedule.columns }}
-          <div class="board-cell">{{ . }}</div>
-          {{ end }}
-        </div>
-        {{ range site.Data.schedule.rows }}
-        <div class="board-row">
-          <div class="board-cell day">{{ .discipline }}</div>
-          {{ range .cells }}
-          <div class="board-cell">
-            {{ if . }}
-            <span class="cname">{{ .name }}</span><span class="ctime">{{ .time }}</span>
-            {{ else }}
-            —
-            {{ end }}
-          </div>
-          {{ end }}
-        </div>
-        {{ end }}
-      </div>
+      {{ partial "schedule-board.html" (dict "Schedule" site.Data.fullschedule "Variant" "compact") }}
     </div>
   </div>
 </section>

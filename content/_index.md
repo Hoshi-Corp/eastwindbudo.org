@@ -31,7 +31,7 @@ floor_facility_list:
   - "2950 Bank St, Unit 1 — Ottawa, ON"
 
 schedule_title: "Find your class this week."
-schedule_lede: "Kids' classes, adult classes, and open-floor time throughout the week — grading happens on this same normal schedule, not as a surprise add-on."
+schedule_lede: "Kids' classes, adult classes, family classes, and open floor time throughout the week — grading happens on this same normal schedule, not as a surprise add-on."
 
 community_title: "Real students, real progress."
 community_lede: "Notes from our instructors and students — technique breakdowns, grading updates, and news from the dojo floor."
