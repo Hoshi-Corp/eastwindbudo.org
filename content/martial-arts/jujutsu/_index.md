@@ -9,6 +9,8 @@ breadcrumb_label: "Martial Arts"
 children_title: "Also in Jujutsu"
 weight: 40
 aliases: ["/jujutsu/"]
+illustration: "jujutsu"
+illustration_caption: "Redirection, not resistance — an opponent's own force turned back on them."
 lineage:
   - name: "Hironori Ōtsuka"
     dates: "1892 – 1980"

@@ -8,6 +8,8 @@ breadcrumb_url: "/dojo/"
 breadcrumb_label: "The Dojo"
 weight: 10
 aliases: ["/eastwind-dojo/protocol-and-etiquete/"]
+illustration: "etiquette"
+illustration_caption: "Sensei ni. Rei. — the bow that opens and closes every class."
 ---
 
 None of this is complicated, and nobody expects you to arrive knowing it. Etiquette at East Wind is mostly about attention — a few shared habits that keep a room full of people training safely and seriously together.

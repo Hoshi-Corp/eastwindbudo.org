@@ -1,0 +1,22 @@
+{{ $key := .Params.illustration }}
+{{ if $key }}
+<section class="illustration-band">
+  <div class="grain"></div>
+  {{ if eq $key "hub" }}
+  <div class="illustration-row">
+    {{ range (slice (dict "key" "karate" "kanji" "空" "label" "Karate") (dict "key" "kobudo" "kanji" "古" "label" "Kobudo") (dict "key" "kungfu" "kanji" "拳" "label" "Kung Fu") (dict "key" "jujutsu" "kanji" "柔" "label" "Jujutsu")) }}
+    <div class="illustration-icon">
+      {{ partial (printf "icons/%s.html" .key) }}
+      <span class="icon-kanji">{{ .kanji }}</span>
+      <span class="icon-label">{{ .label }}</span>
+    </div>
+    {{ end }}
+  </div>
+  {{ else }}
+  <div class="illustration-single">
+    {{ partial (printf "icons/%s.html" $key) }}
+  </div>
+  {{ end }}
+  {{ with .Params.illustration_caption }}<p class="illustration-cap">{{ . }}</p>{{ end }}
+</section>
+{{ end }}

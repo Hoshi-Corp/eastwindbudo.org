@@ -6,6 +6,8 @@ eyebrow: "The Dojo —"
 summary: "East Wind has trained students at Blossom Park since 1995, on three simple ideas: movement, morality, and etiquette."
 children_title: "More About the Dojo"
 aliases: ["/eastwind-dojo/"]
+illustration: "dojo"
+illustration_caption: "Bow at the threshold — the same one since 1995."
 ---
 
 East Wind Budo Life Centre opened in Ottawa in 1995, and the idea behind it hasn't changed since: teach real, traditional martial arts, taught right, to anyone willing to show up and work.
