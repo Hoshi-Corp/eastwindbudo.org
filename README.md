@@ -22,15 +22,16 @@ ported 1:1 from the approved `eastwind-visual-proposal-v4.html` mockup.
 - **Site-wide settings** (address, phone, mailing address, social links, nav labels) —
   `hugo.toml`, under `[params]`
 
-## One known asset issue
+## Logo assets
 
-`static/images/logo-white.png` (from the original project files) is a solid
-white square with no transparency — not usable as an image. The footer
-currently works around this by reusing the dark `logo.png` with a CSS
-`invert()` filter (this was already how the original v4 mockup handled it).
-If you get a proper white/transparent logo file later, swap it into
-`static/images/logo-white.png` and update `layouts/partials/footer.html`
-and the `footer img` filter rule in `assets/scss/main.scss` to use it directly.
+The header and footer use vector logos: `static/images/logo.svg` (dark, for
+the header) and `static/images/logo-white.svg` (white, for the dark footer).
+These replaced the old `logo.png` / `logo-white.png` raster files — the
+white PNG had no transparency, so the footer previously worked around it by
+inverting the dark PNG with a CSS filter; the SVGs make that workaround
+unnecessary. `favicon.ico`, `apple-touch-icon.png`, and `icon-512.png` are
+still generated from the old raster logo and haven't been regenerated from
+the SVG.
 
 ## Local preview
 
