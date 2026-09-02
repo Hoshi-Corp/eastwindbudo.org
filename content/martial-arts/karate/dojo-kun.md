@@ -35,4 +35,4 @@ precepts:
     en: "Continue your training with patience"
 ---
 
-Recited before every class, the Dojo Kun is older than any one dojo — eight lines that have carried karate students through their training for generations. Ours is no different.
+The Dojo Kun is older than any one dojo — eight lines that have carried karate students through their training for generations. Ours is no different.

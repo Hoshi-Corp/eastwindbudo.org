@@ -20,10 +20,10 @@ lineage:
   - name: "Li Sai-wing"
     dates: "active 1930s"
     description: "Continued the line from Lam Sai-wing into the twentieth century."
-  - name: "Sigung Chong Oi Mun"
+  - name: "Sifu Chong Oi Mun"
     dates: "arrived in Canada, 1962"
     description: "The first instructor to bring this Shaolin lineage to Canada. Kung fu carried an unfair reputation at the time — associated in the popular imagination with organized crime — so Chong Oi Mun taught karate fundamentals first, and introduced serious students to Shaolin methods once they'd proven themselves."
-  - name: "Sigung Yamanaka, Sifu Mike & Laura Sywyk"
+  - name: "Sifu Yamanaka, Sifu Mike & Laura Sywyk"
     dates: "present day"
     description: "The lineage carriers teaching at East Wind today."
 ---

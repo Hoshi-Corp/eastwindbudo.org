@@ -146,7 +146,7 @@ content/
   _index.md                  Homepage copy (front matter drives every section)
   posts/                     Blog posts (Community precept + /posts/ listing)
   dojo/                      History & Mission, Protocol & Etiquette, Our Team, Virtual Dojo
-  martial-arts/              Martial Arts hub + Karate, Kobudo, Shaolin Kung Fu, Jujutsu
+  martial-arts/              Martial Arts hub + Karate, Kobudo, Shaolin Kung Fu
   schedule.md                Full weekly schedule page
   contact.md                 Contact page
   community/affiliations.md  Affiliations & links page
