@@ -12,7 +12,13 @@ illustration_caption: "Bow at the threshold — the same one since 1995."
 
 East Wind Budo Life Centre opened in Ottawa in 1995, and the idea behind it hasn't changed since: teach real, traditional martial arts, taught right, to anyone willing to show up and work.
 
-Three arts share our floor — Okinawan Gōjū-ryū Karate, Shaolin Chuan Fa, and Okinawan Kobudo, our weapons tradition covering bo, sai, nunchaku, and more than a dozen other implements. Different arts, same three ideas running underneath all of them: **movement**, **morality**, and **etiquette**.
+Three arts share our floor —
+
+- Okinawan Gōjū-ryū Karate, the renowned art of the "empty hand".
+- Okinawan Kobudo, our weapons tradition covering bo, sai, nunchaku, and more than a dozen other implements.
+- Shaolin Chuan Fa, a Chinese martial art birthed in the famed Shaolin temple.
+
+Different arts, but the same three ideas running underneath all of them: **movement**, **morality**, and **etiquette**.
 
 ## What we're actually building
 

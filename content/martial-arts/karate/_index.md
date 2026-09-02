@@ -26,4 +26,6 @@ lineage:
     description: "Began training at sixteen and became a specialist in kata analysis and bunkai — the applied meaning behind each form. Founded the Okinawa Gōjū-ryū Kenkyūkai and still teaches seminars internationally."
 ---
 
-Our karate is Okinawan Gōjū-ryū — literally "hard-soft style" — built on the idea that real technique needs both. It's taught through blocking, striking, kicking, and kata, the same way it's been passed down for four generations.
+Our Karate is Okinawan Gōjū-ryū — literally "hard-soft style" — built on the idea that real technique needs both. It's taught through blocking, striking, kicking, and kata, the same way it's been passed down for four generations.
+
+The art of Karate was developed in Okinawa, a place that served as an important nexus on the trading routes of the far East. Karate takes influences from the fighting traditions of the travellers who had contact there, and combines the best of them with the native Okinawan emphasis on economy and practicality.
