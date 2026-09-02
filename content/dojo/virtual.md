@@ -12,7 +12,7 @@ illustration: "virtual"
 illustration_caption: "Streamed live on the Eastwind Martial Arts YouTube channel."
 ---
 
-If you can't get to the dojo, the dojo can still reach you. Our virtual classes cover the same four arts we teach on the floor — Karate, Kobudo, Shaolin Kung Fu, and Jujutsu — streamed through the Eastwind Martial Arts YouTube channel. No special equipment required: a phone, tablet, or computer is enough.
+If you can't get to the dojo, the dojo can still reach you. Our virtual classes cover the same three arts we teach on the floor — Karate, Kobudo, and Shaolin Kung Fu — streamed through the Eastwind Martial Arts YouTube channel. No special equipment required: a phone, tablet, or computer is enough.
 
 It's not a replacement for training on a real mat with real partners, but it's a genuine way to keep training when life, weather, or distance gets in the way — and a low-pressure way to see what a class looks like before your first visit.
 

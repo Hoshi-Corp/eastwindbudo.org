@@ -2,8 +2,8 @@
 title: "Martial Arts"
 type: "interior"
 mon: "武"
-eyebrow: "Four Arts, One Dojo —"
-summary: "Karate, Kobudo, Shaolin Kung Fu, and Jujutsu — four traditions, one membership, one training floor at Blossom Park."
+eyebrow: "Three Arts, One Dojo —"
+summary: "Karate, Kobudo, and Shaolin Kung Fu — three traditions, one membership, one training floor at Blossom Park."
 show_ledger: true
 children_title: "Lineage & Tradition"
 illustration: "hub"
