@@ -1,8 +1,24 @@
 <div class="section-band band-washi">
   <div class="section-band-inner">
+    <div class="team-leaders">
+      {{ range where site.Data.team.members "role" "Chief Instructor" }}
+      <div class="team-leader-card">
+        <div class="team-photo team-photo-lg" aria-hidden="true"><span>Photo</span></div>
+        <div class="team-leader-body">
+          <h3>{{ .name }}</h3>
+          <div class="role">{{ .role }}</div>
+          <div class="rank">{{ .rank }}</div>
+          <ul>
+            {{ range .details }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+    </div>
     <div class="team-grid">
-      {{ range site.Data.team.members }}
+      {{ range where site.Data.team.members "role" "!=" "Chief Instructor" }}
       <div class="team-card">
+        <div class="team-photo" aria-hidden="true"><span>Photo</span></div>
         <h3>{{ .name }}</h3>
         <div class="role">{{ .role }}</div>
         <div class="rank">{{ .rank }}</div>
