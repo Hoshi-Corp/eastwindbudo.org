@@ -3,7 +3,7 @@ title: "Our Team"
 type: "interior"
 mon: "師"
 eyebrow: "The Dojo —"
-summary: "Two chief instructors, and an instructor team built over more than a decade of teaching at Blossom Park."
+summary: "Two chief instructors, and an instructor team built over more than a decade of teaching in Ottawa."
 show_team: true
 breadcrumb_url: "/dojo/"
 breadcrumb_label: "The Dojo"

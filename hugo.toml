@@ -18,7 +18,7 @@ canonifyURLs = false
   nav_schedule_label = "Schedule"
   nav_blog_label = "Blog"
   nav_cta_label = "Book a Trial Class"
-  description = "Traditional martial arts in Ottawa's Blossom Park — Gojuryu Karate, Kobudo, and Shaolin Kung Fu for kids, teens, and adults. Book a free trial class."
+  description = "Traditional martial arts in Ottawa — Gojuryu Karate, Kobudo, and Shaolin Kung Fu for kids, teens, and adults. Book a free trial class."
   social_image = "/images/dojo-floor-duotone.jpg"
 
 [markup.goldmark.renderer]

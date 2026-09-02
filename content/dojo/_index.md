@@ -3,7 +3,7 @@ title: "History & Mission"
 type: "interior"
 mon: "道"
 eyebrow: "The Dojo —"
-summary: "East Wind has trained students at Blossom Park since 1995, on three simple ideas: movement, morality, and etiquette."
+summary: "East Wind has trained students in Ottawa since 1995, on three simple ideas: movement, morality, and etiquette."
 children_title: "More About the Dojo"
 aliases: ["/eastwind-dojo/"]
 illustration: "dojo"

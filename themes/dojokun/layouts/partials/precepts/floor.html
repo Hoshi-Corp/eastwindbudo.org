@@ -11,7 +11,7 @@
       <p class="lede">{{ .Params.floor_lede | safeHTML }}</p>
       <div class="floor-photo">
         <img src="{{ .Params.floor_image | default "/images/dojo-floor-duotone.jpg" }}" alt="{{ .Params.floor_image_alt | default "East Wind Budo training floor, with the dojo kun scroll on the back wall" }}">
-        <div class="cap">{{ .Params.floor_image_caption | default "Our floor — Blossom Park, Ottawa" }}</div>
+        <div class="cap">{{ .Params.floor_image_caption | default "Our floor — Ottawa" }}</div>
       </div>
       <ul class="facility-list">
         {{ range .Params.floor_facility_list }}

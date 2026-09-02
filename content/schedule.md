@@ -7,4 +7,4 @@ summary: "Kids' classes, adult classes, and open floor time throughout the week,
 show_full_schedule: true
 ---
 
-Grading happens on this same regular schedule — it's not a separate event. Here's every class currently running at Blossom Park.
+Grading happens on this same regular schedule — it's not a separate event. Here's every class currently running at our Ottawa dojo.

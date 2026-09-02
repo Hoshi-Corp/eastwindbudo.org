@@ -3,7 +3,7 @@ title: "Virtual Dojo"
 type: "interior"
 mon: "遠"
 eyebrow: "The Dojo —"
-summary: "Can't make it to Blossom Park? Train with us anyway — all you need is a phone, a tablet, or a computer."
+summary: "Can't make it to the dojo? Train with us anyway — all you need is a phone, a tablet, or a computer."
 breadcrumb_url: "/dojo/"
 breadcrumb_label: "The Dojo"
 weight: 30
