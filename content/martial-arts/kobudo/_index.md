@@ -9,6 +9,8 @@ breadcrumb_label: "Martial Arts"
 children_title: "Also in Kobudo"
 weight: 20
 aliases: ["/kobudo/"]
+illustration: "kobudo"
+illustration_caption: "Bo and sai — two of fifteen weapons in the curriculum."
 lineage:
   - name: "Matayoshi Shinkō"
     dates: "1888 – 1947"

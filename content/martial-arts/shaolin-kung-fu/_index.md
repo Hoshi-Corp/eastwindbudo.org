@@ -8,6 +8,8 @@ breadcrumb_url: "/martial-arts/"
 breadcrumb_label: "Martial Arts"
 weight: 30
 aliases: ["/shaolin-kung-fu/"]
+illustration: "kungfu"
+illustration_caption: "Named for the forest at the foot of Mount Shao Shi."
 lineage:
   - name: "Wong Fei-hung"
     dates: "active mid-1860s"

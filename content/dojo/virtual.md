@@ -8,6 +8,8 @@ breadcrumb_url: "/dojo/"
 breadcrumb_label: "The Dojo"
 weight: 30
 aliases: ["/eastwind-dojo/virtual/"]
+illustration: "virtual"
+illustration_caption: "Streamed live on the Eastwind Martial Arts YouTube channel."
 ---
 
 If you can't get to the dojo, the dojo can still reach you. Our virtual classes cover the same four arts we teach on the floor — Karate, Kobudo, Shaolin Kung Fu, and Jujutsu — streamed through the Eastwind Martial Arts YouTube channel. No special equipment required: a phone, tablet, or computer is enough.
