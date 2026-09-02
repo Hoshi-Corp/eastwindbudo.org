@@ -9,6 +9,10 @@ groups:
         url: "http://www.ckka.net/"
       - label: "Dai Nippon Butoku Kai (DNBK)"
         url: "http://www.dnbk.org/honbu.cfm"
+  - name: "Gōjū-ryū Kenkyūkai"
+    links:
+      - label: "Gōjū-ryū Kenkyūkai"
+      - url: "https://www.gojuryukenkyukai.com/"
   - name: "The Jundōkan Network"
     links:
       - label: "Jundōkan Sō Honbu — Okinawa, Japan"
