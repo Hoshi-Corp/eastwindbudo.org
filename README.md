@@ -101,8 +101,9 @@ Tracked as issues — see
 [#13](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/13),
 [#14](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/14),
 [#15](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/15),
-[#16](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/16), and
-[#17](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/17).
+[#16](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/16),
+[#17](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/17), and
+[#18](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/18).
 
 ## SEO / sharing polish included in this pass
 
