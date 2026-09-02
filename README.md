@@ -16,8 +16,14 @@ ported 1:1 from the approved `eastwind-visual-proposal-v4.html` mockup.
 - **Affiliations & links** (the `/community/affiliations/` page) — `data/affiliations.yaml`
 - **Interior pages** (The Dojo, Martial Arts, Schedule, Contact) — Markdown files under
   `content/dojo/`, `content/martial-arts/`, `content/schedule.md`, and `content/contact.md`.
-  Each uses `type: "page"` front matter and renders through `layouts/page/list.html` (for
-  section pages with children) or `layouts/page/single.html` (for leaf pages).
+  Each uses `type: "interior"` front matter and renders through `layouts/interior/list.html`
+  (for section pages with children) or `layouts/interior/single.html` (for leaf pages).
+- **Illustration bands** — Dojo and Martial Arts subsection pages don't have real photography
+  (see "Not yet done" below), so they show a hand-drawn ink/SVG emblem instead. Set
+  `illustration: "karate"` (or `kobudo`, `kungfu`, `dojo`, `team`, `etiquette`, `virtual`, or
+  `hub` for the three-art row shown on the Martial Arts hub) plus an optional
+  `illustration_caption:` in a page's front matter; rendered by `partials/illustration.html`
+  pulling the matching `partials/icons/*.html` SVG.
 - **Blog posts** — add a new `.md` file under `content/posts/`. The homepage
   automatically shows the 3 most recent posts. Add `image: "/images/yourphoto.jpg"`
   to a post's front matter to get the large photo-tile treatment (used for
@@ -151,7 +157,7 @@ content/
   contact.md                 Contact page
   community/affiliations.md  Affiliations & links page
 data/
-  disciplines.yaml           The 4 martial arts (Practice precept ledger + /martial-arts/ ledger)
+  disciplines.yaml           The 3 martial arts (Practice precept ledger + /martial-arts/ ledger)
   fullschedule.yaml          Full day-by-day schedule (Schedule precept board on the homepage, and /schedule/ page)
   team.yaml                  Instructor bios (/dojo/team/ page)
   affiliations.yaml          Federation & network links (/community/affiliations/ page)
@@ -167,27 +173,30 @@ themes/dojokun/
     _default/single.html     Blog post page
     _default/list.html       /posts/ listing page
     index.html               Homepage (assembles the 5 precept partials)
-    page/single.html         Interior leaf pages (Contact, Schedule, Team, etc.)
-    page/list.html           Interior section pages (The Dojo, Martial Arts, etc.)
+    interior/single.html     Interior leaf pages (Contact, Schedule, Team, etc.)
+    interior/list.html       Interior section pages (The Dojo, Martial Arts, etc.)
     partials/
       head.html, header.html, footer.html, scripts.html, enso.html, hero.html
       precepts/welcome.html, practice.html, floor.html, schedule.html, community.html
       page-hero.html, content-extras.html, ledger-block.html, team-cards.html,
-      schedule-board.html, contact-block.html, affiliations-block.html
+      schedule-board.html, contact-block.html, affiliations-block.html,
+      illustration.html, icons/karate.html, kobudo.html, kungfu.html, dojo.html,
+      team.html, etiquette.html, virtual.html
 ```
 
 ## Not yet done (flagged from the design review)
 
-- Contact info / open house event details from a flyer still need to be
-  reconciled against `hugo.toml` and the final CTA phone number
-  (currently `613-282-6295`) — this was deferred per an earlier instruction.
-- Additional real action photos (kids' class, kobudo drill, instructor
-  mid-kata) would let real imagery replace any remaining generic elements
-  in future discipline-specific pages, if those get built out.
+- The homepage's final CTA button (`cta_final_primary_url` in
+  `content/_index.md`) still points at a `#` placeholder rather than a real
+  booking link — this was deferred per an earlier instruction.
 - Lineage portrait photos for the Karate, Kobudo, and Shaolin Kung Fu pages
   couldn't be downloaded during the content migration (no outbound network
-  access to the old WordPress media library at the time). See
-  `MIGRATION_NOTES.md` for the source URLs and where they'd need to go.
+  access to the old WordPress media library at the time), and the Dojo and
+  Martial Arts subsection pages don't have real action photography either.
+  Both use hand-drawn ink/SVG illustration bands (`illustration:` front
+  matter, see above) as the interim visual treatment in the same washi/grain
+  language as the homepage. See `MIGRATION_NOTES.md` for the lineage-photo
+  source URLs and where they'd need to go if real photos are added later.
 - The `/contact/` page has no email address — the old site's address was
   behind an obfuscation script that couldn't be decoded reliably. Add the
   real address to `contact-block.html` / `hugo.toml` once you have it.
@@ -195,6 +204,13 @@ themes/dojokun/
   directory to the 12 most current ones (federation + Jundōkan network).
   The full original list is noted in `MIGRATION_NOTES.md` if it should be
   restored in full or added as a "legacy links" appendix.
+- Marketing copy site-wide was reworded to reference Ottawa broadly instead
+  of the "Blossom Park" neighborhood name, so a future location change is
+  just an address-param edit. The literal street address (`hugo.toml`, the
+  Contact page) is left as-is since it's the real, current location.
+- The Jujutsu discipline (and its `/martial-arts/jujutsu/` pages) was
+  dropped from the site; `MIGRATION_NOTES.md`'s sitemap section still lists
+  it from the original migration and is now stale on that point.
 
 ## SEO / sharing polish included in this pass
 
