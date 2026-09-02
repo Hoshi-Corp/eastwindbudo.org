@@ -46,3 +46,41 @@ jobs:
 
       - name: Build site
         run: hugo --minify --gc
+
+  pr-preview:
+    name: PR preview deploy
+    needs: [markdown-lint, hugo-build]
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Install Hugo Extended
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      # Preview deploys land on their own Cloudflare Pages branch subdomain
+      # (a real site root), so the theme's root-relative links work
+      # unmodified — no subpath rewriting needed.
+      - name: Build site for preview
+        run: hugo --minify --gc --baseURL "https://pr-${{ github.event.number }}.${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}.pages.dev/"
+
+      - name: Deploy preview to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
+          directory: ./public
+          branch: pr-${{ github.event.number }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
