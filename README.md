@@ -52,97 +52,7 @@ Visit `http://localhost:1313`.
 
 ## Deploying to your VPS
 
-### 1. Install Hugo Extended (required — the SCSS pipeline needs the Extended build)
-
-```bash
-HUGO_VERSION=0.140.2
-wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-sudo dpkg -i hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-hugo version   # should say "extended"
-```
-
-### 2. Build the static site
-
-From this project's root directory:
-
-```bash
-hugo --minify
-```
-
-This produces a `public/` directory containing the fully static site —
-this is the only thing that needs to reach your server.
-
-Before your first real deploy, edit `hugo.toml` and set `baseURL` to your
-actual domain (currently `https://eastwindbudo.org/`).
-
-### 3. Copy `public/` to your VPS
-
-```bash
-rsync -avz --delete public/ your-user@your-vps-ip:/var/www/eastwindbudo/
-```
-
-### 4. Nginx configuration
-
-Create `/etc/nginx/sites-available/eastwindbudo.org`:
-
-```nginx
-server {
-    listen 80;
-    listen [::]:80;
-    server_name eastwindbudo.org www.eastwindbudo.org;
-
-    root /var/www/eastwindbudo;
-    index index.html;
-
-    # Hugo generates pretty URLs (e.g. /posts/graduation-day-new-belts/index.html)
-    location / {
-        try_files $uri $uri/ $uri/index.html =404;
-    }
-
-    # Cache the fingerprinted, versioned CSS aggressively
-    location /scss/ {
-        expires 1y;
-        add_header Cache-Control "public, immutable";
-    }
-
-    location /images/ {
-        expires 30d;
-        add_header Cache-Control "public";
-    }
-
-    # Hugo's default 404 page, if you add one at content/404.md later
-    error_page 404 /404.html;
-}
-```
-
-Enable it:
-
-```bash
-sudo ln -s /etc/nginx/sites-available/eastwindbudo.org /etc/nginx/sites-enabled/
-sudo nginx -t
-sudo systemctl reload nginx
-```
-
-### 5. HTTPS (recommended)
-
-```bash
-sudo apt install certbot python3-certbot-nginx
-sudo certbot --nginx -d eastwindbudo.org -d www.eastwindbudo.org
-```
-
-Certbot will edit the nginx config to add the SSL server block and set up
-auto-renewal.
-
-### Redeploying after content changes
-
-Every time you edit content, data, or the theme:
-
-```bash
-hugo --minify
-rsync -avz --delete public/ your-user@your-vps-ip:/var/www/eastwindbudo/
-```
-
-No server restart is needed — it's all static files served by nginx.
+See [`DEPLOY.md`](DEPLOY.md) for the full VPS setup and redeploy steps.
 
 ## Project structure
 
@@ -186,31 +96,14 @@ themes/dojokun/
 
 ## Not yet done (flagged from the design review)
 
-- The homepage's final CTA button (`cta_final_primary_url` in
-  `content/_index.md`) still points at a `#` placeholder rather than a real
-  booking link — this was deferred per an earlier instruction.
-- Lineage portrait photos for the Karate, Kobudo, and Shaolin Kung Fu pages
-  couldn't be downloaded during the content migration (no outbound network
-  access to the old WordPress media library at the time), and the Dojo and
-  Martial Arts subsection pages don't have real action photography either.
-  Both use hand-drawn ink/SVG illustration bands (`illustration:` front
-  matter, see above) as the interim visual treatment in the same washi/grain
-  language as the homepage. See `MIGRATION_NOTES.md` for the lineage-photo
-  source URLs and where they'd need to go if real photos are added later.
-- The `/contact/` page has no email address — the old site's address was
-  behind an obfuscation script that couldn't be decoded reliably. Add the
-  real address to `contact-block.html` / `hugo.toml` once you have it.
-- `/community/affiliations/` was curated down from the old site's 37-link
-  directory to the 12 most current ones (federation + Jundōkan network).
-  The full original list is noted in `MIGRATION_NOTES.md` if it should be
-  restored in full or added as a "legacy links" appendix.
-- Marketing copy site-wide was reworded to reference Ottawa broadly instead
-  of the "Blossom Park" neighborhood name, so a future location change is
-  just an address-param edit. The literal street address (`hugo.toml`, the
-  Contact page) is left as-is since it's the real, current location.
-- The Jujutsu discipline (and its `/martial-arts/jujutsu/` pages) was
-  dropped from the site; `MIGRATION_NOTES.md`'s sitemap section still lists
-  it from the original migration and is now stale on that point.
+Tracked as issues — see
+[#12](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/12),
+[#13](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/13),
+[#14](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/14),
+[#15](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/15),
+[#16](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/16),
+[#17](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/17), and
+[#18](https://github.com/Hoshi-Corp/eastwindbudo.org/issues/18).
 
 ## SEO / sharing polish included in this pass
 
