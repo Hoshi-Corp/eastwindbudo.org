@@ -76,6 +76,7 @@ jobs:
         run: hugo --minify --gc --baseURL "https://pr-${{ github.event.number }}.${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}.pages.dev/"
 
       - name: Deploy preview to Cloudflare Pages
+        id: deploy
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -84,3 +85,13 @@ jobs:
           directory: ./public
           branch: pr-${{ github.event.number }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      # cloudflare/pages-action only exposes the URL as a step output, it
+      # doesn't comment on the PR itself — do that here, updating the same
+      # comment on every push instead of piling up a new one each time.
+      - name: Comment preview URL on PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-preview
+          message: |
+            🔗 Preview deployed: ${{ steps.deploy.outputs.alias }}
