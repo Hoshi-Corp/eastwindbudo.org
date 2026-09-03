@@ -71,12 +71,18 @@ jobs:
 
       # Preview deploys land on their own Cloudflare Pages branch subdomain
       # (a real site root), so the theme's root-relative links work
-      # unmodified — no subpath rewriting needed.
+      # unmodified — no subpath rewriting needed. Compute it once: the
+      # deploy step's own "alias" output is per-push (a throwaway hash
+      # URL), not this stable branch alias, so it can't be used for the
+      # comment below.
+      - name: Set preview URL
+        id: preview
+        run: echo "url=https://pr-${{ github.event.number }}.${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}.pages.dev/" >> "$GITHUB_OUTPUT"
+
       - name: Build site for preview
-        run: hugo --minify --gc --baseURL "https://pr-${{ github.event.number }}.${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}.pages.dev/"
+        run: hugo --minify --gc --baseURL "${{ steps.preview.outputs.url }}"
 
       - name: Deploy preview to Cloudflare Pages
-        id: deploy
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -94,4 +100,4 @@ jobs:
         with:
           header: pr-preview
           message: |
-            🔗 Preview deployed: ${{ steps.deploy.outputs.alias }}
+            🔗 Preview deployed: ${{ steps.preview.outputs.url }}
