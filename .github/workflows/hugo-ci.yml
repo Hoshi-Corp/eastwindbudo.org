@@ -5,6 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+    types: [opened, reopened, synchronize, closed]
   workflow_dispatch:
 
 env:
@@ -17,6 +18,7 @@ jobs:
   markdown-lint:
     name: Markdown lint
     runs-on: ubuntu-latest
+    if: github.event.action != 'closed'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,6 +33,7 @@ jobs:
   hugo-build:
     name: Hugo build
     runs-on: ubuntu-latest
+    if: github.event.action != 'closed'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -46,3 +49,127 @@ jobs:
 
       - name: Build site
         run: hugo --minify --gc
+
+  pr-preview:
+    name: PR preview deploy
+    needs: [markdown-lint, hugo-build]
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Install Hugo Extended
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      # Preview deploys land on their own Cloudflare Pages branch subdomain
+      # (a real site root), so the theme's root-relative links work
+      # unmodified — no subpath rewriting needed. Compute it once: the
+      # deploy step's own "alias" output is per-push (a throwaway hash
+      # URL), not this stable branch alias, so it can't be used for the
+      # comment below.
+      - name: Set preview URL
+        id: preview
+        run: echo "url=https://pr-${{ github.event.number }}.${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}.pages.dev/" >> "$GITHUB_OUTPUT"
+
+      - name: Build site for preview
+        run: hugo --minify --gc --baseURL "${{ steps.preview.outputs.url }}"
+
+      - name: Deploy preview to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
+          directory: ./public
+          branch: pr-${{ github.event.number }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      # Cloudflare Pages deployments are immutable — every push here creates
+      # a new one rather than replacing the last. Prune this PR's older
+      # deployments so they don't pile up for the life of the PR; the one
+      # just created (steps.deploy.outputs.id) is always kept.
+      - name: Prune older preview deployments for this PR
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
+          BRANCH: pr-${{ github.event.number }}
+          KEEP_ID: ${{ steps.deploy.outputs.id }}
+        run: |
+          set -euo pipefail
+          api="https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID/pages/projects/$PROJECT/deployments"
+
+          # List first, delete after: deleting mid-pagination would shift
+          # later pages under us and risk skipping an entry.
+          ids=()
+          page=1
+          while :; do
+            resp=$(curl -sS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$api?page=$page&per_page=25")
+            n=$(jq '.result | length' <<<"$resp")
+            [ "$n" -eq 0 ] && break
+            while IFS= read -r id; do
+              ids+=("$id")
+            done < <(jq -r --arg b "$BRANCH" '.result[] | select(.deployment_trigger.metadata.branch == $b) | .id' <<<"$resp")
+            page=$((page + 1))
+          done
+
+          for id in "${ids[@]}"; do
+            if [ "$id" != "$KEEP_ID" ]; then
+              echo "Deleting old preview deployment $id (branch $BRANCH)"
+              curl -sS -X DELETE -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$api/$id?force=true" >/dev/null
+            fi
+          done
+
+      # cloudflare/pages-action only exposes the URL as a step output, it
+      # doesn't comment on the PR itself — do that here, updating the same
+      # comment on every push instead of piling up a new one each time.
+      - name: Comment preview URL on PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-preview
+          message: |
+            🔗 Preview deployed: ${{ steps.preview.outputs.url }}
+
+  pr-preview-cleanup:
+    name: PR preview cleanup
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete all preview deployments for this PR
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
+          BRANCH: pr-${{ github.event.number }}
+        run: |
+          set -euo pipefail
+          api="https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID/pages/projects/$PROJECT/deployments"
+
+          ids=()
+          page=1
+          while :; do
+            resp=$(curl -sS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$api?page=$page&per_page=25")
+            n=$(jq '.result | length' <<<"$resp")
+            [ "$n" -eq 0 ] && break
+            while IFS= read -r id; do
+              ids+=("$id")
+            done < <(jq -r --arg b "$BRANCH" '.result[] | select(.deployment_trigger.metadata.branch == $b) | .id' <<<"$resp")
+            page=$((page + 1))
+          done
+
+          for id in "${ids[@]}"; do
+            echo "Deleting preview deployment $id (branch $BRANCH)"
+            curl -sS -X DELETE -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$api/$id?force=true" >/dev/null
+          done
