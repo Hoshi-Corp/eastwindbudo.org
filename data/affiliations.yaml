@@ -12,7 +12,7 @@ groups:
   - name: "Gōjū-ryū Kenkyūkai"
     links:
       - label: "Gōjū-ryū Kenkyūkai"
-      - url: "https://www.gojuryukenkyukai.com/"
+        url: "https://www.gojuryukenkyukai.com/"
   - name: "The Jundōkan Network"
     links:
       - label: "Jundōkan Sō Honbu — Okinawa, Japan"
