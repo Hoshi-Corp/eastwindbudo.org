@@ -7,8 +7,9 @@
   <img class="hero-icon" src="{{ .RelPermalink }}" alt="">
   {{ end }}
   {{ end }}
-  {{ with .Params.eyebrow }}<span class="tag">{{ . }}</span>{{ end }}
+  {{ with .Params.eyebrow }}
+  {{ with $.Params.breadcrumb_url }}<a class="tag" href="{{ . }}">{{ $.Params.eyebrow }}</a>{{ else }}<span class="tag">{{ . }}</span>{{ end }}
+  {{ end }}
   <h1>{{ .Title }}</h1>
   {{ with .Params.summary }}<p class="hero-sub">{{ . | safeHTML }}</p>{{ end }}
-  {{ with .Params.breadcrumb_url }}<a class="back-link" href="{{ . }}">← {{ $.Params.breadcrumb_label | default "Back" }}</a>{{ end }}
 </section>
