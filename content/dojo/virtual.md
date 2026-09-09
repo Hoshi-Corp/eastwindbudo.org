@@ -9,7 +9,6 @@ breadcrumb_label: "The Dojo"
 weight: 30
 aliases: ["/eastwind-dojo/virtual/"]
 illustration: "virtual"
-illustration_caption: "Streamed live on the Eastwind Martial Arts YouTube channel."
 ---
 
 If you can't physically get to the dojo, you can still reach the dojo. Our virtual classes cover the same three arts we teach on the floor — Karate, Kobudo, and Shaolin Kung Fu — streamed live via Zoom. No special equipment is required: a web browser on a phone, tablet, or computer is enough.

@@ -10,7 +10,6 @@ breadcrumb_label: "The Dojo"
 weight: 20
 aliases: ["/eastwind-dojo/our-team/"]
 illustration: "team"
-illustration_caption: "Rank earned in-house, over more than thirteen years."
 ---
 
 Every class at East Wind is led by one of two chief instructors, backed by an instructor team that's been trained in-house over more than thirteen years — two world champions among them.

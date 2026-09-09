@@ -1,8 +1,7 @@
 {{ $key := .Params.illustration }}
-{{ if $key }}
+{{ if eq $key "hub" }}
 <section class="illustration-band">
   <div class="grain"></div>
-  {{ if eq $key "hub" }}
   <div class="illustration-row">
     {{ range (slice (dict "key" "karate" "label" "Karate") (dict "key" "kobudo" "label" "Kobudo") (dict "key" "kungfu" "label" "Kung Fu")) }}
     {{ $label := .label }}
@@ -14,13 +13,5 @@
     </div>
     {{ end }}
   </div>
-  {{ else }}
-  {{ with resources.Get (printf "images/illustrations/%s.png" $key) }}
-  <div class="illustration-single">
-    <img class="icon-img" src="{{ .RelPermalink }}" alt="">
-  </div>
-  {{ end }}
-  {{ end }}
-  {{ with .Params.illustration_caption }}<p class="illustration-cap">{{ . }}</p>{{ end }}
 </section>
 {{ end }}
