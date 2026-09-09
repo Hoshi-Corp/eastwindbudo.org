@@ -406,7 +406,7 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
     position:static; transform:none; opacity:1; visibility:visible; pointer-events:auto; box-shadow:none;
     border:none; padding:0 0 6px 14px; display:none; min-width:0;
   }
-  .nav-item.open .dropdown{ display:flex; }
+  .nav-item.open .dropdown{ display:flex; transform:none; }
   .nav-item.open .nav-caret{ transform:rotate(180deg); }
   .util-nav .cta{ margin-top:16px; text-align:center; }
 
