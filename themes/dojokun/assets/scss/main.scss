@@ -315,6 +315,8 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
 .children-section .list-grid{ padding-top:24px; }
 
 .section-band{ padding:90px 32px; }
+.post-body:has(+ .section-band){ padding-bottom:40px; }
+.post-body + .section-band{ padding-top:40px; }
 .section-band-inner{ max-width:960px; margin:0 auto; }
 .section-band .ledger, .section-band .team-grid, .section-band .day-schedule{ margin-top:0; }
 .band-washi{ background:var(--washi); color:var(--ink); }
