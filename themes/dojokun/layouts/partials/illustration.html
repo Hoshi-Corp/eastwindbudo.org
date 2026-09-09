@@ -4,14 +4,12 @@
   <div class="grain"></div>
   {{ if eq $key "hub" }}
   <div class="illustration-row">
-    {{ range (slice (dict "key" "karate" "kanji" "空" "label" "Karate") (dict "key" "kobudo" "kanji" "古" "label" "Kobudo") (dict "key" "kungfu" "kanji" "拳" "label" "Kung Fu")) }}
-    {{ $kanji := .kanji }}
+    {{ range (slice (dict "key" "karate" "label" "Karate") (dict "key" "kobudo" "label" "Kobudo") (dict "key" "kungfu" "label" "Kung Fu")) }}
     {{ $label := .label }}
     <div class="illustration-icon">
       {{ with resources.Get (printf "images/illustrations/%s.png" .key) }}
       <img class="icon-img" src="{{ .RelPermalink }}" alt="">
       {{ end }}
-      <span class="icon-kanji">{{ $kanji }}</span>
       <span class="icon-label">{{ $label }}</span>
     </div>
     {{ end }}
