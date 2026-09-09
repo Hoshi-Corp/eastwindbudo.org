@@ -10,7 +10,6 @@ children_title: "Also in Karate"
 weight: 10
 aliases: ["/karate/"]
 illustration: "karate"
-illustration_caption: "Gōjū-ryū — hard and soft, in the same technique."
 lineage:
   - name: "Higaonna Kanryō"
     dates: "1853 – 1915"

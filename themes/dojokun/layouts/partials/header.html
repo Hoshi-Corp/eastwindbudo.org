@@ -1,5 +1,6 @@
 {{ $homeAnchor := "" }}
 {{ if not .IsHome }}{{ $homeAnchor = "/" }}{{ end }}
+<div class="nav-scrim" id="navScrim" aria-hidden="true"></div>
 <header id="siteHeader"{{ if not .IsHome }} class="force-solid"{{ end }}>
   <div class="logo-mark">
     <a href="{{ "/" | relLangURL }}"><img src="/images/logo.svg" alt="{{ site.Title }}"></a>

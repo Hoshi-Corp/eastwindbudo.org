@@ -9,7 +9,6 @@ breadcrumb_label: "Martial Arts"
 weight: 30
 aliases: ["/shaolin-kung-fu/"]
 illustration: "kungfu"
-illustration_caption: "Named for the forest at the foot of Mount Shao Shi."
 lineage:
   - name: "Wong Fei-hung"
     dates: "active mid-1860s"
@@ -23,9 +22,9 @@ lineage:
   - name: "Sifu Chong Oi Mun"
     dates: "arrived in Canada, 1962"
     description: "The first instructor to bring this Shaolin lineage to Canada. Kung fu carried an unfair reputation at the time — associated in the popular imagination with organized crime — so Chong Oi Mun taught karate fundamentals first, and introduced serious students to Shaolin methods once they'd proven themselves."
-  - name: "Sifu Yamanaka, Sifu Mike & Laura Sywyk"
+  - name: "Sifu Yamanaka"
     dates: "present day"
-    description: "The lineage carriers teaching at East Wind today."
+    description: "The lineage carrier teaching at East Wind today."
 ---
 
 Kung fu — 功夫, "skill built through effort" — is a name for disciplines that take real time to earn. Ours traces back through the Shaolin Monastery, founded in Henan Province in 495 A.D. by the abbot Ba Tuo, on land granted by the Chinese emperor at the base of Mount Shao Shi. The name is a compound of that mountain and "lin" — forest.
