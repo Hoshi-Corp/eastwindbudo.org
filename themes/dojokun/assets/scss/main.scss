@@ -293,10 +293,18 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
 .illustration-icon .icon-label{ font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.6; }
 
 .lineage-list{ margin-top:36px; display:grid; gap:26px; }
-.lineage-row{ padding-bottom:22px; border-bottom:1px solid rgba(27,23,18,0.12); }
+.lineage-row{ display:flex; gap:22px; align-items:flex-start; padding-bottom:22px; border-bottom:1px solid rgba(27,23,18,0.12); }
 .lineage-row .l-name{ font-family:var(--display); font-size:21px; letter-spacing:0.01em; }
 .lineage-row .l-dates{ font-family:var(--mono); font-size:12px; opacity:0.55; margin-top:2px; }
 .lineage-row .l-desc{ font-size:16px; line-height:1.65; opacity:0.85; margin-top:8px; }
+
+.lineage-photo{
+  flex:0 0 auto; width:72px; height:72px; border-radius:50%;
+  background:var(--washi); border:1px dashed rgba(27,23,18,0.3);
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+}
+.lineage-photo span{ font-family:var(--mono); font-size:9px; letter-spacing:0.05em; text-transform:uppercase; opacity:0.45; }
+.lineage-photo img{ width:100%; height:100%; object-fit:cover; border-radius:50%; }
 
 .precepts-list{ margin-top:32px; display:grid; gap:26px; }
 .precept-item{ display:grid; grid-template-columns:44px 1fr; gap:16px; align-items:start; }

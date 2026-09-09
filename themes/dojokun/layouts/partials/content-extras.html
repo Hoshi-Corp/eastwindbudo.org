@@ -2,9 +2,16 @@
 <div class="lineage-list">
   {{ range .Params.lineage }}
   <div class="lineage-row">
-    <div class="l-name">{{ .name }}</div>
-    <div class="l-dates">{{ .dates }}</div>
-    <p class="l-desc">{{ .description }}</p>
+    {{ if .photo }}
+    <div class="lineage-photo"><img src="{{ .photo }}" alt="Portrait of {{ .name }}" loading="lazy"></div>
+    {{ else }}
+    <div class="lineage-photo" aria-hidden="true"><span>Photo</span></div>
+    {{ end }}
+    <div class="lineage-row-body">
+      <div class="l-name">{{ .name }}</div>
+      <div class="l-dates">{{ .dates }}</div>
+      <p class="l-desc">{{ .description }}</p>
+    </div>
   </div>
   {{ end }}
 </div>
