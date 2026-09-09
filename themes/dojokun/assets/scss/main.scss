@@ -286,11 +286,15 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
 
 .illustration-band{ position:relative; background:var(--washi-deep); padding:64px 32px 52px; text-align:center; overflow:hidden; }
 .illustration-band .grain{ opacity:0.05; }
+.illustration-single{ position:relative; z-index:2; display:flex; justify-content:center; }
+.illustration-single .icon-img{ width:150px; height:150px; }
 .illustration-row{ position:relative; z-index:2; display:flex; justify-content:center; gap:56px; flex-wrap:wrap; }
 .illustration-icon{ display:flex; flex-direction:column; align-items:center; gap:10px; }
+.illustration-icon .icon-img{ width:96px; height:96px; }
 .illustration-icon .icon-kanji{ font-family:var(--display); font-size:40px; color:var(--gold); }
 .illustration-icon .icon-label{ font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.6; }
 .illustration-cap{ position:relative; z-index:2; margin:0 auto; max-width:52ch; font-family:var(--mono); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; opacity:0.6; }
+.illustration-single + .illustration-cap, .illustration-row + .illustration-cap{ margin-top:26px; }
 
 .lineage-list{ margin-top:36px; display:grid; gap:26px; }
 .lineage-row{ padding-bottom:22px; border-bottom:1px solid rgba(27,23,18,0.12); }
