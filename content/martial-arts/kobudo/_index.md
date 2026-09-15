@@ -24,6 +24,7 @@ lineage:
   - name: "Gakiya Yoshiaki"
     dates: "b. 1950"
     description: "Joined the All Okinawa Kobudo Association in 1975 and trained under Matayoshi Shinpō. After Shinpō's death in 1997 he became the Kōdōkan's second Kanchō, and in 2002 founded the Okinawa Kobudo Dōshi Rensei-kai (OKDR)."
+    photo: "/images/lineage/gakiya-yoshiaki.png"
   - name: "Yogi Josei"
     dates: "b. 1935"
     description: "Holds 8th dan in Kobudo and serves as an executive advisor to the OKDR, alongside 9th dan rank in Konan-ryū Karate-dō. Known, above all, for his patience as a teacher."
