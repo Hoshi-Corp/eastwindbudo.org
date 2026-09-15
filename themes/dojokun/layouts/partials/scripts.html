@@ -41,4 +41,26 @@
       btn.setAttribute('aria-expanded', String(isOpen));
     });
   });
+
+  // Lineage photo lightbox
+  const lineageDialog = document.getElementById('lineagePhotoDialog');
+  if (lineageDialog) {
+    const lineageDialogImg = document.getElementById('lineagePhotoDialogImg');
+    const lineageDialogCaption = document.getElementById('lineagePhotoDialogCaption');
+    const lineageDialogClose = lineageDialog.querySelector('.lineage-photo-dialog-close');
+    document.querySelectorAll('.lineage-photo-trigger').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        lineageDialogImg.src = btn.dataset.photoSrc;
+        lineageDialogImg.alt = btn.querySelector('img').alt;
+        const name = btn.dataset.photoName || '';
+        const note = btn.dataset.photoNote || '';
+        lineageDialogCaption.textContent = note ? `${name} — ${note}` : name;
+        lineageDialog.showModal();
+      });
+    });
+    lineageDialogClose.addEventListener('click', () => lineageDialog.close());
+    lineageDialog.addEventListener('click', (e) => {
+      if (e.target === lineageDialog) lineageDialog.close();
+    });
+  }
 </script>
