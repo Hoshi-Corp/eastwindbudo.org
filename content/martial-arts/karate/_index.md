@@ -14,6 +14,8 @@ lineage:
   - name: "Higaonna Kanryō"
     dates: "1853 – 1915"
     description: "Born in Naha, Okinawa. Higaonna travelled to Fuzhou, China in 1868 and trained fifteen years under master Ryu Ryu Ko before returning to Okinawa in 1881 to establish Naha-te. He's honored today as one of the founders of Okinawan karate."
+    photo: "/images/lineage/higaonna-kanryo.png"
+    illustrative: true    # optional — shows "Illustrative portrait" caption + adjusted alt text
   - name: "Miyagi Chōjun"
     dates: "1888 – 1953"
     description: "Systemized Naha-te into what became Gōjū-ryū, and formalized teaching methods that let karate be taught in schools and carried far beyond Okinawa. He passed away on October 8, 1953, leaving that system as his legacy."
