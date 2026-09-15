@@ -3,7 +3,16 @@
   {{ range .Params.lineage }}
   <div class="lineage-row">
     {{ if .photo }}
-    <div class="lineage-photo"><img src="{{ .photo }}" alt="Portrait of {{ .name }}" loading="lazy"></div>
+    <div class="lineage-photo-wrap">
+      <div class="lineage-photo">
+        {{ if .illustrative }}
+        <img src="{{ .photo }}" alt="Illustrative portrait of {{ .name }} — not a historical photograph" loading="lazy">
+        {{ else }}
+        <img src="{{ .photo }}" alt="Portrait of {{ .name }}" loading="lazy">
+        {{ end }}
+      </div>
+      {{ if .illustrative }}<div class="lineage-photo-note">Illustrative portrait</div>{{ end }}
+    </div>
     {{ else }}
     <div class="lineage-photo" aria-hidden="true"><span>Photo</span></div>
     {{ end }}

@@ -298,6 +298,7 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
 .lineage-row .l-dates{ font-family:var(--mono); font-size:12px; opacity:0.55; margin-top:2px; }
 .lineage-row .l-desc{ font-size:16px; line-height:1.65; opacity:0.85; margin-top:8px; }
 
+.lineage-photo-wrap{ flex:0 0 auto; width:72px; display:grid; gap:6px; justify-items:center; }
 .lineage-photo{
   flex:0 0 auto; width:72px; height:72px; border-radius:50%;
   background:var(--washi); border:1px dashed rgba(27,23,18,0.3);
@@ -305,6 +306,10 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
 }
 .lineage-photo span{ font-family:var(--mono); font-size:9px; letter-spacing:0.05em; text-transform:uppercase; opacity:0.45; }
 .lineage-photo img{ width:100%; height:100%; object-fit:cover; border-radius:50%; }
+.lineage-photo-note{
+  font-family:var(--mono); font-size:8px; letter-spacing:0.04em; text-transform:uppercase;
+  opacity:0.5; text-align:center; line-height:1.3;
+}
 
 .precepts-list{ margin-top:32px; display:grid; gap:26px; }
 .precept-item{ display:grid; grid-template-columns:44px 1fr; gap:16px; align-items:start; }
