@@ -364,6 +364,7 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
   display:flex; align-items:center; justify-content:center;
 }
 .team-photo span{ font-family:var(--mono); font-size:9px; letter-spacing:0.05em; text-transform:uppercase; opacity:0.45; }
+.team-photo img{ width:100%; height:100%; object-fit:cover; border-radius:50%; }
 .team-photo-lg{ width:104px; height:104px; }
 .team-photo-lg span{ font-size:10px; }
 

@@ -3,7 +3,13 @@
     <div class="team-leaders">
       {{ range where site.Data.team.members "role" "Chief Instructor" }}
       <div class="team-leader-card">
+        {{ if .photo }}
+        <div class="team-photo team-photo-lg">
+          <img src="{{ .photo }}" alt="Portrait of {{ .name }}" loading="lazy">
+        </div>
+        {{ else }}
         <div class="team-photo team-photo-lg" aria-hidden="true"><span>Photo</span></div>
+        {{ end }}
         <div class="team-leader-body">
           <h3>{{ .name }}</h3>
           <div class="role">{{ .role }}</div>
@@ -18,7 +24,13 @@
     <div class="team-grid">
       {{ range where site.Data.team.members "role" "!=" "Chief Instructor" }}
       <div class="team-card">
+        {{ if .photo }}
+        <div class="team-photo">
+          <img src="{{ .photo }}" alt="Portrait of {{ .name }}" loading="lazy">
+        </div>
+        {{ else }}
         <div class="team-photo" aria-hidden="true"><span>Photo</span></div>
+        {{ end }}
         <h3>{{ .name }}</h3>
         <div class="role">{{ .role }}</div>
         <div class="rank">{{ .rank }}</div>
