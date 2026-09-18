@@ -4,7 +4,7 @@
   <div class="lineage-row">
     {{ if .photo }}
     <div class="lineage-photo-wrap">
-      <button type="button" class="lineage-photo lineage-photo-trigger"
+      <button type="button" class="lineage-photo photo-lightbox-trigger"
         data-photo-src="{{ .photo }}" data-photo-name="{{ .name }}"
         data-photo-note="{{ if .illustrative }}Illustrative portrait — not a historical photograph{{ end }}"
         aria-label="View larger portrait of {{ .name }}">
@@ -27,11 +27,7 @@
   </div>
   {{ end }}
 </div>
-<dialog id="lineagePhotoDialog" class="lineage-photo-dialog">
-  <button type="button" class="lineage-photo-dialog-close" aria-label="Close">&times;</button>
-  <img id="lineagePhotoDialogImg" src="" alt="">
-  <div id="lineagePhotoDialogCaption" class="lineage-photo-dialog-caption"></div>
-</dialog>
+{{ partial "photo-lightbox.html" . }}
 {{ end }}
 {{ if .Params.precepts }}
 <div class="precepts-list">
