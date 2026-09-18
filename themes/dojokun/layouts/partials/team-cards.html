@@ -3,7 +3,15 @@
     <div class="team-leaders">
       {{ range where site.Data.team.members "role" "Chief Instructor" }}
       <div class="team-leader-card">
+        {{ if .photo }}
+        <button type="button" class="team-photo team-photo-lg photo-lightbox-trigger"
+          data-photo-src="{{ .photo }}" data-photo-name="{{ .name }}"
+          aria-label="View larger portrait of {{ .name }}">
+          <img src="{{ .photo }}" alt="Portrait of {{ .name }}" loading="lazy">
+        </button>
+        {{ else }}
         <div class="team-photo team-photo-lg" aria-hidden="true"><span>Photo</span></div>
+        {{ end }}
         <div class="team-leader-body">
           <h3>{{ .name }}</h3>
           <div class="role">{{ .role }}</div>
@@ -18,7 +26,15 @@
     <div class="team-grid">
       {{ range where site.Data.team.members "role" "!=" "Chief Instructor" }}
       <div class="team-card">
+        {{ if .photo }}
+        <button type="button" class="team-photo photo-lightbox-trigger"
+          data-photo-src="{{ .photo }}" data-photo-name="{{ .name }}"
+          aria-label="View larger portrait of {{ .name }}">
+          <img src="{{ .photo }}" alt="Portrait of {{ .name }}" loading="lazy">
+        </button>
+        {{ else }}
         <div class="team-photo" aria-hidden="true"><span>Photo</span></div>
+        {{ end }}
         <h3>{{ .name }}</h3>
         <div class="role">{{ .role }}</div>
         <div class="rank">{{ .rank }}</div>
@@ -31,3 +47,4 @@
     {{ with site.Data.team.note }}<p class="schedule-footnote">{{ . }}</p>{{ end }}
   </div>
 </div>
+{{ if not .Params.lineage }}{{ partial "photo-lightbox.html" . }}{{ end }}

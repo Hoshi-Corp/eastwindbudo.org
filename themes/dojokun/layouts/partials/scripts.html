@@ -42,25 +42,25 @@
     });
   });
 
-  // Lineage photo lightbox
-  const lineageDialog = document.getElementById('lineagePhotoDialog');
-  if (lineageDialog) {
-    const lineageDialogImg = document.getElementById('lineagePhotoDialogImg');
-    const lineageDialogCaption = document.getElementById('lineagePhotoDialogCaption');
-    const lineageDialogClose = lineageDialog.querySelector('.lineage-photo-dialog-close');
-    document.querySelectorAll('.lineage-photo-trigger').forEach((btn) => {
+  // Photo lightbox — shared by lineage entries and team cards
+  const photoDialog = document.getElementById('photoLightboxDialog');
+  if (photoDialog) {
+    const photoDialogImg = document.getElementById('photoLightboxDialogImg');
+    const photoDialogCaption = document.getElementById('photoLightboxDialogCaption');
+    const photoDialogClose = photoDialog.querySelector('.photo-lightbox-dialog-close');
+    document.querySelectorAll('.photo-lightbox-trigger').forEach((btn) => {
       btn.addEventListener('click', () => {
-        lineageDialogImg.src = btn.dataset.photoSrc;
-        lineageDialogImg.alt = btn.querySelector('img').alt;
+        photoDialogImg.src = btn.dataset.photoSrc;
+        photoDialogImg.alt = btn.querySelector('img').alt;
         const name = btn.dataset.photoName || '';
         const note = btn.dataset.photoNote || '';
-        lineageDialogCaption.textContent = note ? `${name} — ${note}` : name;
-        lineageDialog.showModal();
+        photoDialogCaption.textContent = note ? `${name} — ${note}` : name;
+        photoDialog.showModal();
       });
     });
-    lineageDialogClose.addEventListener('click', () => lineageDialog.close());
-    lineageDialog.addEventListener('click', (e) => {
-      if (e.target === lineageDialog) lineageDialog.close();
+    photoDialogClose.addEventListener('click', () => photoDialog.close());
+    photoDialog.addEventListener('click', (e) => {
+      if (e.target === photoDialog) photoDialog.close();
     });
   }
 </script>

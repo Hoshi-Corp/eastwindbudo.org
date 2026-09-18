@@ -311,29 +311,29 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
   opacity:0.5; text-align:center; line-height:1.3;
 }
 
-.lineage-photo-trigger{
+.photo-lightbox-trigger{
   padding:0; border:1px solid transparent; cursor:pointer; transition:opacity .15s ease;
 }
-.lineage-photo-trigger:hover, .lineage-photo-trigger:focus-visible{ opacity:0.8; }
+.photo-lightbox-trigger:hover, .photo-lightbox-trigger:focus-visible{ opacity:0.8; }
 
-.lineage-photo-dialog{
+.photo-lightbox-dialog{
   position:fixed; inset:0; margin:auto; padding:0; border:none; width:88vw; max-width:480px;
   height:fit-content; max-height:88vh; overflow:auto; background:var(--washi);
   box-shadow:0 24px 60px rgba(27,23,18,0.35);
 }
-.lineage-photo-dialog::backdrop{ background:rgba(22,18,15,0.7); }
-.lineage-photo-dialog img{ display:block; width:100%; height:auto; }
-.lineage-photo-dialog-caption{
+.photo-lightbox-dialog::backdrop{ background:rgba(22,18,15,0.7); }
+.photo-lightbox-dialog img{ display:block; width:100%; height:auto; }
+.photo-lightbox-dialog-caption{
   padding:16px 20px 20px; font-family:var(--mono); font-size:12px; letter-spacing:0.03em;
   text-align:center; color:var(--ink); opacity:0.75;
 }
-.lineage-photo-dialog-close{
+.photo-lightbox-dialog-close{
   position:absolute; top:10px; right:10px; width:32px; height:32px; border-radius:50%;
   border:none; background:var(--washi); color:var(--ink); font-size:20px; line-height:1;
   cursor:pointer; display:flex; align-items:center; justify-content:center;
   box-shadow:0 4px 12px rgba(27,23,18,0.25);
 }
-.lineage-photo-dialog-close:hover{ background:var(--shu); color:var(--washi); }
+.photo-lightbox-dialog-close:hover{ background:var(--shu); color:var(--washi); }
 
 .precepts-list{ margin-top:32px; display:grid; gap:26px; }
 .precept-item{ display:grid; grid-template-columns:44px 1fr; gap:16px; align-items:start; }
@@ -364,6 +364,7 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
   display:flex; align-items:center; justify-content:center;
 }
 .team-photo span{ font-family:var(--mono); font-size:9px; letter-spacing:0.05em; text-transform:uppercase; opacity:0.45; }
+.team-photo img{ width:100%; height:100%; object-fit:cover; border-radius:50%; }
 .team-photo-lg{ width:104px; height:104px; }
 .team-photo-lg span{ font-size:10px; }
 
