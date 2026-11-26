@@ -60,10 +60,9 @@ language as the approved homepage.
    `content-extras.html` partial would need a two-line addition to render it (not done here, to
    avoid guessing at crop/treatment without the actual files in hand).
 
-2. **Contact email.** The old contact page's email was behind an obfuscation script that couldn't
-   be decoded reliably — rather than guess, the `/contact/` page omits an email address and shows
-   phone, mailing address, and social links only. Add the real address to `contact-block.html` /
-   `hugo.toml` params once you have it.
+2. **Contact email.** *(Resolved.)* The old contact page's email was behind an obfuscation script
+   that couldn't be decoded reliably, so the address was left out at migration. The real address
+   is now set as `email` in `hugo.toml` `[params]` and rendered by `contact-block.html`.
 
 3. **Affiliations page was curated, not exhaustive.** The old `/links/` page listed 37 outbound
    links accumulated since the mid-2000s (sister dojos, a stretching guide, an Ottawa weather page,
