@@ -11,17 +11,6 @@ aliases: ["/eastwind-dojo/virtual/"]
 illustration: "virtual"
 show_virtual: true
 
-virtual_features:
-  - icon: "arts"
-    title: "The same three arts"
-    text: "Karate, Kobudo, and Shaolin Kung Fu — the same curriculum we teach on the floor."
-  - icon: "live"
-    title: "Live on Zoom"
-    text: "Classes stream live via Zoom, so you train along with the class as it happens."
-  - icon: "device"
-    title: "No special equipment"
-    text: "A web browser on a phone, tablet, or computer is enough."
-
 virtual_steps:
   - "Get in touch and ask about virtual access."
   - "Check the weekly schedule. Class notes show what's in-person only or virtual only."
