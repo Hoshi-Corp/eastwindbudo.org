@@ -1,5 +1,5 @@
 {{- $address := site.Params.address -}}
-{{- $mapsURL := printf "https://www.google.com/maps/search/?api=1&query=%s" (urlquery $address) -}}
+{{- $mapsURL := site.Params.maps_url | default (printf "https://www.google.com/maps/search/?api=1&query=%s" (urlquery $address)) -}}
 <div class="section-band band-washi-deep contact-band">
   <div class="section-band-inner contact-layout">
 

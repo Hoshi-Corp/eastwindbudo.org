@@ -8,6 +8,7 @@ canonifyURLs = false
 
 [params]
   address = "2950 Bank St, Unit 1, Blossom Park Shopping Centre, Ottawa, ON"
+  maps_url = "https://maps.app.goo.gl/WoZzQPXBNUWvnub7A"
   phone_display = "613-878-6833"
   phone_tel = "6138786833"
   phone_secondary_display = "613-282-6295"

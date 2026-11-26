@@ -28,7 +28,7 @@ ported 1:1 from the approved `eastwind-visual-proposal-v4.html` mockup.
   automatically shows the 3 most recent posts. Add `image: "/images/yourphoto.jpg"`
   to a post's front matter to get the large photo-tile treatment (used for
   "Graduation day: new belts").
-- **Site-wide settings** (address, phone, email, social links, nav labels) —
+- **Site-wide settings** (address, Google Maps link, phone, email, social links, nav labels) —
   `hugo.toml`, under `[params]`
 
 ## Logo assets
