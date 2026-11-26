@@ -8,10 +8,10 @@ canonifyURLs = false
 
 [params]
   address = "2950 Bank St, Unit 1, Blossom Park Shopping Centre, Ottawa, ON"
-  phone_display = "613-282-6295"
-  phone_tel = "6132826295"
-  phone_secondary_display = "613-878-6833"
-  phone_secondary_tel = "6138786833"
+  phone_display = "613-878-6833"
+  phone_tel = "6138786833"
+  phone_secondary_display = "613-282-6295"
+  phone_secondary_tel = "6132826295"
   facebook_url = "https://www.facebook.com/EastwindMartialArtsOttawaSouth"
   youtube_url = "https://www.youtube.com/channel/UCrNuWlxEbqnCtBpzWJ7UgEg"
   nav_schedule_label = "Schedule"

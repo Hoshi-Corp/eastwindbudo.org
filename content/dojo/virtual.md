@@ -15,4 +15,4 @@ If you can't physically get to the dojo, you can still reach the dojo. Our virtu
 
 Attending class virtually is not a replacement for training on a real mat with real partners, but it's a genuine way to keep training when life, weather, or distance gets in the way — and a low-pressure way to see what a class looks like before your first visit.
 
-Questions about virtual access? Reach us at [613-282-6295](tel:6132826295) or through the [contact page](/contact/).
+Questions about virtual access? Reach us at [613-878-6833](tel:6138786833) or through the [contact page](/contact/).
