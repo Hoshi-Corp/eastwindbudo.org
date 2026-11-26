@@ -1,9 +1,10 @@
 <div class="section-band band-sumi-soft virtual-join">
   <div class="section-band-inner virtual-join-inner">
     <div class="virtual-join-head">
-      <span class="contact-eyebrow">How to join</span>
+      <span class="contact-eyebrow">Online classes</span>
       <h2>Train from wherever you are.</h2>
-      <p class="virtual-join-lede">Three steps between you and your next class.</p>
+      {{ with .Params.virtual_intro }}<p class="virtual-join-lede">{{ . }}</p>{{ end }}
+      {{ with .Params.virtual_note }}<p class="virtual-join-note">{{ . }}</p>{{ end }}
     </div>
 
     {{ with .Params.virtual_steps }}

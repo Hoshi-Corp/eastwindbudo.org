@@ -441,9 +441,10 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
 
 .virtual-join, .post-body + .virtual-join{ padding-top:110px; padding-bottom:110px; }
 .virtual-join-inner{ max-width:1080px; }
-.virtual-join-head{ text-align:center; max-width:640px; margin:0 auto 56px; }
+.virtual-join-head{ text-align:center; max-width:700px; margin:0 auto 64px; }
 .virtual-join h2{ font-family:var(--display); font-weight:400; font-size:clamp(34px,5vw,56px); line-height:1.05; margin:14px 0 16px; }
-.virtual-join-lede{ font-size:17px; line-height:1.6; opacity:0.8; }
+.virtual-join-lede{ font-size:19px; line-height:1.6; opacity:0.9; margin-bottom:16px; }
+.virtual-join-note{ font-size:15.5px; line-height:1.65; opacity:0.6; max-width:60ch; margin:0 auto; }
 
 .virtual-steps{ list-style:none; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; counter-reset:none; }
 .virtual-step{ position:relative; padding-top:26px; border-top:1px solid rgba(233,226,210,0.22); }
