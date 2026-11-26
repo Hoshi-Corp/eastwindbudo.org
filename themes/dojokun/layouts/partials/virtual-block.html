@@ -1,0 +1,50 @@
+{{- $icons := dict
+  "arts" `<path fill="currentColor" d="M12 2 3 7v2h18V7zm-7 9v7H3v2h18v-2h-2v-7h-2v7h-3v-7h-2v7H7v-7z"/>`
+  "live" `<path fill="currentColor" d="M3 6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3.5l4-3v11l-4-3V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>`
+  "device" `<path fill="currentColor" d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10H4zm2 0v8h12V5zM2 17h20v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/>`
+-}}
+{{ with .Params.virtual_features }}
+<div class="section-band band-washi-deep">
+  <div class="section-band-inner">
+    <div class="virtual-features">
+      {{ range . }}
+      <div class="virtual-feature">
+        <svg class="virtual-feature-icon" aria-hidden="true" viewBox="0 0 24 24" width="30" height="30">{{ index $icons .icon | safeHTML }}</svg>
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
+
+<div class="section-band band-sumi-soft virtual-join">
+  <div class="section-band-inner virtual-join-inner">
+    <div class="virtual-join-steps">
+      <span class="contact-eyebrow">How to join</span>
+      <h2>Train from wherever you are.</h2>
+      {{ with .Params.virtual_steps }}
+      <ol class="contact-steps">
+        {{ range $i, $s := . }}
+        <li><span class="step-num">{{ printf "%02d" (add $i 1) }}</span><span>{{ $s }}</span></li>
+        {{ end }}
+      </ol>
+      {{ end }}
+      <div class="virtual-actions">
+        <a class="btn btn-primary" href="/contact/">Ask about virtual access</a>
+        <a class="btn btn-ghost" href="/schedule/">See the schedule</a>
+      </div>
+    </div>
+
+    {{ with site.Params.youtube_virtual_url }}
+    <a class="virtual-youtube" href="{{ . }}" target="_blank" rel="noopener">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="44" height="44"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.02V8.98L15.5 12z"/></svg>
+      <span class="virtual-youtube-label">YouTube</span>
+      <span class="virtual-youtube-title">Virtual Dojo channel</span>
+      <span class="virtual-youtube-text">Videos from the East Wind virtual dojo.</span>
+      <span class="contact-link">Visit the channel →</span>
+    </a>
+    {{ end }}
+  </div>
+</div>

@@ -439,6 +439,28 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
 .contact-link:hover{ text-decoration:underline; text-underline-offset:3px; }
 .contact-social{ display:flex; gap:22px; flex-wrap:wrap; }
 
+.virtual-features{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; background:rgba(27,23,18,0.12); border:1px solid rgba(27,23,18,0.12); }
+.virtual-feature{ background:var(--washi); padding:34px 30px; }
+.virtual-feature-icon{ color:var(--oxblood); margin-bottom:16px; }
+.virtual-feature h3{ font-family:var(--display); font-weight:400; font-size:22px; margin-bottom:8px; }
+.virtual-feature p{ font-size:15px; line-height:1.6; opacity:0.85; }
+
+.virtual-join-inner{ max-width:1080px; display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr); gap:56px; align-items:center; }
+.virtual-join h2{ font-family:var(--display); font-weight:400; font-size:clamp(30px,4vw,42px); line-height:1.1; margin:12px 0 26px; }
+.virtual-actions{ display:flex; flex-wrap:wrap; gap:12px; }
+.virtual-actions .btn-primary{ background:var(--oxblood); color:var(--washi); }
+.virtual-actions .btn-primary:hover{ background:#8f2a1d; }
+.virtual-actions .btn-ghost:hover{ border-color:var(--gold); color:var(--gold); }
+.virtual-youtube{
+  display:flex; flex-direction:column; gap:6px; padding:36px 32px; text-decoration:none;
+  background:var(--washi); color:var(--ink); border-top:4px solid var(--oxblood); transition:transform .2s;
+}
+.virtual-youtube:hover{ transform:translateY(-3px); }
+.virtual-youtube svg{ color:#c4302b; margin-bottom:8px; }
+.virtual-youtube-label{ font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.6; }
+.virtual-youtube-title{ font-family:var(--display); font-size:26px; line-height:1.15; }
+.virtual-youtube-text{ font-size:15px; opacity:0.8; margin-bottom:10px; }
+
 .affil-groups{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:40px; }
 .affil-group h3{ font-family:var(--display); font-weight:400; font-size:20px; margin-bottom:14px; }
 .affil-group ul{ list-style:none; display:grid; gap:10px; }
@@ -490,9 +512,14 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
   .contact-trial{ padding:38px 26px; }
   .contact-card{ padding:24px 22px; }
   .contact-phone{ width:100%; }
+  .virtual-features, .virtual-join-inner{ grid-template-columns:1fr; }
+  .virtual-join-inner{ gap:36px; }
+  .virtual-actions .btn{ width:100%; text-align:center; }
 }
 
 @media (prefers-reduced-motion: reduce){
   .scroll-cue .line{ animation:none; }
   html{ scroll-behavior:auto; }
+  .virtual-youtube{ transition:none; }
+  .virtual-youtube:hover{ transform:none; }
 }

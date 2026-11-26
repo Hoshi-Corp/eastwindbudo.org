@@ -15,6 +15,7 @@ canonifyURLs = false
   email = "msywyk4310@gmail.com"
   facebook_url = "https://www.facebook.com/EastwindMartialArtsOttawaSouth"
   youtube_url = "https://www.youtube.com/channel/UCrNuWlxEbqnCtBpzWJ7UgEg"
+  youtube_virtual_url = "https://www.youtube.com/@eastwindmartialartsvirtual201"
   nav_schedule_label = "Schedule"
   nav_blog_label = "Blog"
   nav_cta_label = "Book a Trial Class"
