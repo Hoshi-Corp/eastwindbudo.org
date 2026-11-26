@@ -397,11 +397,46 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
 .off-days-note{ text-align:center; font-family:var(--mono); font-size:12px; opacity:0.5; margin-top:22px; text-transform:uppercase; letter-spacing:0.05em; }
 .schedule-footnote{ margin-top:24px; font-size:14.5px; opacity:0.8; text-align:center; }
 
-.contact-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:36px; }
-.contact-block h3{ font-family:var(--mono); font-size:11.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
-.contact-block p{ font-size:15px; line-height:1.6; margin-bottom:6px; }
-.contact-block a{ text-decoration:none; }
-.contact-block a:hover{ color:var(--gold); }
+.contact-layout{ max-width:1080px; display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:28px; align-items:stretch; }
+.contact-trial{
+  position:relative; overflow:hidden; background:var(--sumi); color:var(--washi);
+  padding:48px 44px; border-top:4px solid var(--oxblood);
+}
+.contact-trial::after{
+  content:"縁"; position:absolute; right:-18px; bottom:-48px; font-size:220px; line-height:1;
+  color:var(--washi); opacity:0.04; pointer-events:none;
+}
+.contact-eyebrow{ font-family:var(--mono); font-size:11.5px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); }
+.contact-trial h2{ font-family:var(--display); font-weight:400; font-size:clamp(32px,4.4vw,46px); line-height:1.05; margin:12px 0 14px; }
+.contact-trial-lede{ font-size:17px; line-height:1.6; opacity:0.85; margin-bottom:28px; max-width:46ch; }
+.contact-steps{ list-style:none; display:grid; gap:14px; margin-bottom:34px; }
+.contact-steps li{ display:grid; grid-template-columns:38px 1fr; gap:12px; font-size:15.5px; line-height:1.5; }
+.contact-steps .step-num{ font-family:var(--mono); font-size:12px; color:var(--gold); padding-top:3px; }
+.contact-steps a{ color:var(--washi); text-decoration-color:var(--gold); text-underline-offset:3px; }
+.contact-steps a:hover{ color:var(--gold); }
+.contact-phones{ display:flex; flex-wrap:wrap; gap:12px; position:relative; z-index:1; }
+.contact-phone{
+  display:inline-flex; align-items:center; gap:12px; padding:14px 22px; text-decoration:none;
+  border:1px solid rgba(233,226,210,0.35); color:var(--washi);
+  font-family:var(--mono); font-size:17px; letter-spacing:0.04em; transition:background .2s, border-color .2s, color .2s;
+}
+.contact-phone small{ display:block; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.7; margin-bottom:2px; }
+.contact-phone:hover{ border-color:var(--gold); color:var(--gold); }
+.contact-phone-primary{ background:var(--oxblood); border-color:var(--oxblood); font-size:20px; padding:16px 26px; }
+.contact-phone-primary:hover{ background:#8f2a1d; border-color:#8f2a1d; color:var(--washi); }
+
+.contact-cards{ display:grid; gap:1px; background:rgba(27,23,18,0.12); border:1px solid rgba(27,23,18,0.12); align-content:stretch; }
+.contact-card{ background:var(--washi); padding:28px 30px; display:grid; grid-template-columns:40px 1fr; column-gap:16px; align-content:start; }
+.contact-card > *:not(.contact-icon){ grid-column:2; }
+.contact-icon{ grid-row:1 / span 3; color:var(--oxblood); margin-top:2px; }
+.contact-card h3{ font-family:var(--display); font-weight:400; font-size:22px; margin-bottom:6px; }
+.contact-card p{ font-size:15px; line-height:1.55; opacity:0.85; margin-bottom:10px; }
+.contact-link{
+  font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--oxblood); text-decoration:none; justify-self:start;
+}
+.contact-link:hover{ text-decoration:underline; text-underline-offset:3px; }
+.contact-social{ display:flex; gap:22px; flex-wrap:wrap; }
 
 .affil-groups{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:40px; }
 .affil-group h3{ font-family:var(--display); font-weight:400; font-size:20px; margin-bottom:14px; }
@@ -450,7 +485,10 @@ footer .fine{ font-family:var(--mono); font-size:11px; letter-spacing:0.05em; }
   .illustration-row{ gap:32px; }
   .lineage-row .l-dates{ margin-bottom:2px; }
   .day-row{ grid-template-columns:1fr; gap:10px; }
-  .contact-grid, .affil-groups{ grid-template-columns:1fr; }
+  .contact-layout, .affil-groups{ grid-template-columns:1fr; }
+  .contact-trial{ padding:38px 26px; }
+  .contact-card{ padding:24px 22px; }
+  .contact-phone{ width:100%; }
 }
 
 @media (prefers-reduced-motion: reduce){

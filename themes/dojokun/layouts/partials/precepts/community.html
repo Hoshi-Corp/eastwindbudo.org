@@ -39,7 +39,7 @@
     <h2>{{ .Params.cta_final_title }}</h2>
     <p>{{ .Params.cta_final_text }}</p>
     <div class="cta-buttons">
-      <a class="btn btn-primary" href="{{ .Params.cta_final_primary_url | default "#" }}">{{ .Params.cta_final_primary | default "Book a Trial Class" }}</a>
+      <a class="btn btn-primary" href="{{ .Params.cta_final_primary_url | default "/contact/" }}">{{ .Params.cta_final_primary | default "Book a Trial Class" }}</a>
       <a class="btn btn-ghost" href="tel:{{ site.Params.phone_tel }}">Call {{ site.Params.phone_display }}</a>
     </div>
   </div>

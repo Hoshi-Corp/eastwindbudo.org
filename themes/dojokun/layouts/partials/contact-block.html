@@ -1,22 +1,59 @@
-<div class="section-band band-dusk">
-  <div class="section-band-inner">
-    <div class="contact-grid">
-      <div class="contact-block">
-        <h3>Visit</h3>
-        <p>{{ site.Params.address }}</p>
-      </div>
-      <div class="contact-block">
-        <h3>Call</h3>
-        <p><a href="tel:{{ site.Params.phone_tel }}">{{ site.Params.phone_display }}</a></p>
+{{- $address := site.Params.address -}}
+{{- $mapsURL := printf "https://www.google.com/maps/search/?api=1&query=%s" (urlquery $address) -}}
+<div class="section-band band-washi-deep contact-band">
+  <div class="section-band-inner contact-layout">
+
+    <section class="contact-trial" aria-labelledby="contact-trial-title">
+      <span class="contact-eyebrow">Free trial class</span>
+      <h2 id="contact-trial-title">Your first class is on us.</h2>
+      <p class="contact-trial-lede">No gear, no experience, and no pressure required.</p>
+
+      <ol class="contact-steps">
+        <li><span class="step-num">01</span><span>Call us. We'll answer your questions and help you choose a class.</span></li>
+        <li><span class="step-num">02</span><span>Pick a time from the <a href="/schedule/">weekly schedule</a>.</span></li>
+        <li><span class="step-num">03</span><span>Come to the dojo. Karate, kobudo, or kung fu: your trial can be in any of the three.</span></li>
+      </ol>
+
+      <div class="contact-phones">
+        <a class="contact-phone contact-phone-primary" href="tel:{{ site.Params.phone_tel }}">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+          <span><small>Call</small>{{ site.Params.phone_display }}</span>
+        </a>
         {{ with site.Params.phone_secondary_display }}
-        <p><a href="tel:{{ site.Params.phone_secondary_tel }}">{{ . }}</a></p>
+        <a class="contact-phone" href="tel:{{ site.Params.phone_secondary_tel }}">
+          <span><small>Or</small>{{ . }}</span>
+        </a>
         {{ end }}
       </div>
-      <div class="contact-block">
-        <h3>Follow</h3>
-        {{ with site.Params.facebook_url }}<p><a href="{{ . }}" target="_blank" rel="noopener">Facebook</a></p>{{ end }}
-        {{ with site.Params.youtube_url }}<p><a href="{{ . }}" target="_blank" rel="noopener">YouTube</a></p>{{ end }}
-      </div>
+    </section>
+
+    <div class="contact-cards">
+      <section class="contact-card">
+        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <h3>Visit the dojo</h3>
+        <p>{{ $address }}</p>
+        <a class="contact-link" href="{{ $mapsURL }}" target="_blank" rel="noopener">Get directions →</a>
+      </section>
+
+      <section class="contact-card">
+        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2zm-2 8h14v10H5zm2 2v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2z"/></svg>
+        <h3>Class times</h3>
+        <p>Kids', adult, and family classes run throughout the week.</p>
+        <a class="contact-link" href="/schedule/">See the schedule →</a>
+      </section>
+
+      {{ if or site.Params.facebook_url site.Params.youtube_url }}
+      <section class="contact-card">
+        <svg class="contact-icon" aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M18 16a3 3 0 0 0-2.4 1.2l-6.7-3.4a3 3 0 0 0 0-1.6l6.7-3.4A3 3 0 1 0 15 7l-6.7 3.4a3 3 0 1 0 0 3.2L15 17a3 3 0 1 0 3-1z"/></svg>
+        <h3>Follow along</h3>
+        <p>News, gradings, and technique from the dojo floor.</p>
+        <div class="contact-social">
+          {{ with site.Params.facebook_url }}<a class="contact-link" href="{{ . }}" target="_blank" rel="noopener">Facebook →</a>{{ end }}
+          {{ with site.Params.youtube_url }}<a class="contact-link" href="{{ . }}" target="_blank" rel="noopener">YouTube →</a>{{ end }}
+        </div>
+      </section>
+      {{ end }}
     </div>
+
   </div>
 </div>

@@ -1,10 +1,12 @@
 {{ define "main" }}
 {{ partial "page-hero.html" . }}
 {{ partial "illustration.html" . }}
+{{ if or .Content .Params.lineage .Params.precepts }}
 <article class="post-body">
   {{ .Content }}
   {{ partial "content-extras.html" . }}
 </article>
+{{ end }}
 {{ if .Params.show_team }}{{ partial "team-cards.html" . }}{{ end }}
 {{ if .Params.show_full_schedule }}{{ partial "schedule-board.html" (dict "Schedule" site.Data.fullschedule "Variant" "full") }}{{ end }}
 {{ if .Params.show_contact }}{{ partial "contact-block.html" . }}{{ end }}
