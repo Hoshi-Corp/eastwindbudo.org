@@ -2,9 +2,9 @@
 title: "History & Mission"
 type: "interior"
 mon: "道"
-eyebrow: "The Dojo —"
+eyebrow: "The Dōjō —"
 summary: "East Wind has trained students in Ottawa since 1995, on three simple ideas: movement, morality, and etiquette."
-children_title: "More About the Dojo"
+children_title: "More About the Dōjō"
 aliases: ["/eastwind-dojo/"]
 illustration: "dojo"
 ---
@@ -14,7 +14,7 @@ East Wind Budo Life Centre opened in Ottawa in 1995, and the idea behind it hasn
 Three arts share our floor —
 
 - Okinawan Gōjū-ryū Karate, the renowned art of the "empty hand".
-- Okinawan Kobudo, our weapons tradition covering bo, sai, nunchaku, and more than a dozen other implements.
+- Okinawan Kobudō, our weapons tradition covering bō, sai, nunchaku, and more than a dozen other implements.
 - Shaolin Chuan Fa, a Chinese martial art birthed in the famed Shaolin temple.
 
 Different arts, but the same three ideas running underneath all of them: **movement**, **morality**, and **etiquette**.
@@ -25,10 +25,10 @@ We're not training for a trophy case. Every class works toward four things: focu
 
 ## The wider point
 
-Three ideas guide how we run the dojo day to day:
+Three ideas guide how we run the dōjō day to day:
 
 - Training here should improve your life enough that it changes how you show up for your family and your community, too.
 - Martial arts should be a visible argument for peace, not violence — taught through patience and example, not intimidation.
-- Budo — "the warrior's way" — is worth preserving on its own terms, not diluted into a sport.
+- Budō — "the warrior's way" — is worth preserving on its own terms, not diluted into a sport.
 
 We take that seriously without taking ourselves too seriously. Come try a class and see for yourself.

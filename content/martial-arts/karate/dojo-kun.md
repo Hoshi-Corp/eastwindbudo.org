@@ -1,5 +1,5 @@
 ---
-title: "The Dojo Kun"
+title: "The Dōjō Kun"
 type: "interior"
 mon: "訓"
 eyebrow: "Martial Arts — Karate —"
@@ -13,10 +13,10 @@ precepts:
     jp: "謙虚にして礼儀を重んぜよ (Kenkyo ni shite reigi o omonzeyo)"
     en: "Be humble and polite"
   - num: "一"
-    jp: "体力に応じて適度に修行をせよ (Tairyoku ni oujite tekido ni shugyō o seyo)"
+    jp: "体力に応じて適度に修行をせよ (Tairyoku ni ōjite tekido ni shugyō o seyo)"
     en: "Train according to your physical strength"
   - num: "一"
-    jp: "真剣に工夫研究せよ (Shinken ni kōfu kenkyū seyo)"
+    jp: "真剣に工夫研究せよ (Shinken ni kufū kenkyū seyo)"
     en: "Practice earnestly, with creativity"
   - num: "一"
     jp: "沈着平静にして敏捷自在なれ (Chinchaku heisei ni shite binshō jizai nare)"
@@ -35,4 +35,4 @@ precepts:
     en: "Continue your training with patience"
 ---
 
-The Dojo Kun is older than any one dojo — eight lines that have carried karate students through their training for generations. Ours is no different.
+The Dōjō Kun is older than any one dōjō — eight lines that have carried karate students through their training for generations. Ours is no different.

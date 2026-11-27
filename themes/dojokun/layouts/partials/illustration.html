@@ -3,7 +3,7 @@
 <section class="illustration-band">
   <div class="grain"></div>
   <div class="illustration-row">
-    {{ range (slice (dict "key" "karate" "label" "Karate") (dict "key" "kobudo" "label" "Kobudo") (dict "key" "kungfu" "label" "Kung Fu")) }}
+    {{ range (slice (dict "key" "karate" "label" "Karate") (dict "key" "kobudo" "label" "Kobudō") (dict "key" "kungfu" "label" "Kung Fu")) }}
     {{ $label := .label }}
     <div class="illustration-icon">
       {{ with resources.Get (printf "images/illustrations/%s.png" .key) }}

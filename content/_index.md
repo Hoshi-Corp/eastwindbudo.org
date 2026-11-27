@@ -3,38 +3,38 @@ title: "Home"
 aliases: ["/home/"]
 
 hero_eyebrow: "Ottawa — Traditional Martial Arts"
-hero_title: "Karate. Kobudo. Kung Fu. For every age, from day one."
-hero_description: "A real dojo floor in Ottawa — building focus, confidence, and honest self-defense skill, one class at a time. Kids, teens, and adults all train here."
+hero_title: "Karate. Kobudō. Kung Fu. For every age, from day one."
+hero_description: "A real dōjō floor in Ottawa — building focus, confidence, and honest self-defense skill, one class at a time. Kids, teens, and adults all train here."
 hero_cta_primary: "Book a Free Trial Class"
 hero_cta_primary_url: "/contact/"
 hero_cta_secondary: "See This Week's Schedule"
 hero_cta_secondary_url: "#p4"
-hero_scroll_cue: "Meet the dojo"
+hero_scroll_cue: "Meet the dōjō"
 
 welcome_title: "You're welcome here, from day one."
 welcome_lede:
   - "No experience, no gear, and no belt required to start. Every class opens and closes with a simple bow — to the room, to the instructor, to the students beside you — and that's the only \"ritual\" you need to know on day one. Everything else, we teach as you go."
   - "We've built East Wind around three things: respect, discipline, and real self-confidence, taught through traditional martial arts, for every age and every background."
 
-practice_title: "Three martial arts. One dojo, one community."
+practice_title: "Three martial arts. One dōjō, one community."
 practice_lede: "Not sure which one's for you? Most students start with karate and branch out once they're comfortable — your free trial class can be in any of the three."
 
 floor_title: "A real 2,000&nbsp;sq&nbsp;ft training floor."
-floor_lede: "This is our actual dojo in Ottawa — not a converted yoga studio or a corner of a gym. Room enough for karate lines, kobudo weapon drills, and kung fu forms, side by side."
+floor_lede: "This is our actual dōjō in Ottawa — not a converted yoga studio or a corner of a gym. Room enough for karate lines, kobudō weapon drills, and kung fu forms, side by side."
 floor_image: "/images/dojo-floor-duotone.jpg"
-floor_image_alt: "East Wind Budo training floor, with the dojo kun scroll on the back wall"
+floor_image_alt: "East Wind Budo training floor, with the dōjō kun scroll on the back wall"
 floor_image_caption: "Our floor — Ottawa"
 floor_facility_list:
-  - "Dedicated weapons wall for kobudo practice"
+  - "Dedicated weapons wall for kobudō practice"
   - "Mirrored training floor for kata and form work"
-  - "Virtual dojo option for training from home"
+  - "Virtual dōjō option for training from home"
   - "2950 Bank St, Unit 1 — Ottawa, ON"
 
 schedule_title: "Find your class this week."
 schedule_lede: "Kids' classes, adult classes, family classes, and open floor time throughout the week — grading happens on this same normal schedule, not as a surprise add-on."
 
 community_title: "Real students, real progress."
-community_lede: "Notes from our instructors and students — technique breakdowns, grading updates, and news from the dojo floor."
+community_lede: "Notes from our instructors and students — technique breakdowns, grading updates, and news from the dōjō floor."
 
 cta_final_eyebrow: "Hitotsu —"
 cta_final_title: "Your first class is on us."

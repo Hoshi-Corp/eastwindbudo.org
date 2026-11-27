@@ -1,10 +1,10 @@
-- name: "Gojuryu Karate"
+- name: "Gōjū-ryū Karate"
   description: "Traditional Okinawan karate — striking, forms, and sparring, built on hard and soft movement in balance."
   ages: "Ages 6+"
   link: "/martial-arts/karate/"
 
-- name: "Kobudo"
-  description: "Traditional Okinawan weapons training — bo, sai, and nunchaku — usually paired with karate."
+- name: "Kobudō"
+  description: "Traditional Okinawan weapons training — bō, sai, and nunchaku — usually paired with karate."
   ages: "Teens & adults"
   link: "/martial-arts/kobudo/"
 
