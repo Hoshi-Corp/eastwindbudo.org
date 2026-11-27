@@ -21,7 +21,7 @@ This produces a `public/` directory containing the fully static site —
 this is the only thing that needs to reach your server.
 
 Before your first real deploy, edit `hugo.toml` and set `baseURL` to your
-actual domain (currently `https://eastwindbudo.org/`).
+actual domain (currently `https://www.eastwindbudo.org/`).
 
 ### 3. Copy `public/` to your VPS
 
