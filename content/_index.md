@@ -16,7 +16,7 @@ welcome_lede:
   - "No experience, no gear, and no belt required to start. Every class opens and closes with a simple bow — to the room, to the instructor, to the students beside you — and that's the only \"ritual\" you need to know on day one. Everything else, we teach as you go."
   - "We've built East Wind around three things: respect, discipline, and real self-confidence, taught through traditional martial arts, for every age and every background."
 
-practice_title: "Three martial arts. One dojo, one membership."
+practice_title: "Three martial arts. One dojo, one community."
 practice_lede: "Not sure which one's for you? Most students start with karate and branch out once they're comfortable — your free trial class can be in any of the three."
 
 floor_title: "A real 2,000&nbsp;sq&nbsp;ft training floor."
