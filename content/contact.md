@@ -3,8 +3,6 @@ title: "Contact Us"
 type: "interior"
 mon: "縁"
 eyebrow: "Get In Touch —"
-summary: "2950 Bank St, Unit 1 — Blossom Park Shopping Centre, Ottawa."
+summary: "Questions about classes, membership, or a free trial? Call, email, or drop by the dojo."
 show_contact: true
 ---
-
-Questions about classes, membership, or booking a trial lesson? Reach us any of these ways.

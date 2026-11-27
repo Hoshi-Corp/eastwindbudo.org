@@ -1,5 +1,3 @@
-{{ $homeAnchor := "" }}
-{{ if not .IsHome }}{{ $homeAnchor = "/" }}{{ end }}
 <div class="nav-scrim" id="navScrim" aria-hidden="true"></div>
 <header id="siteHeader"{{ if not .IsHome }} class="force-solid"{{ end }}>
   <div class="logo-mark">
@@ -31,6 +29,6 @@
     <a href="/schedule/">{{ site.Params.nav_schedule_label | default "Schedule" }}</a>
     <a href="/posts/">{{ site.Params.nav_blog_label | default "Blog" }}</a>
     <a href="/contact/">Contact</a>
-    <a class="cta" href="{{ $homeAnchor }}#p5">{{ site.Params.nav_cta_label | default "Book a Trial Class" }}</a>
+    <a class="cta" href="/contact/">{{ site.Params.nav_cta_label | default "Book a Trial Class" }}</a>
   </nav>
 </header>

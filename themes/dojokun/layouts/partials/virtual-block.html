@@ -1,0 +1,48 @@
+<div class="section-band band-washi virtual-intro">
+  <div class="section-band-inner virtual-intro-inner">
+    <div>
+      <span class="contact-eyebrow">Online classes</span>
+      <h2>Train from wherever you are.</h2>
+      {{ with .Params.virtual_intro }}<p class="virtual-intro-lede">{{ . }}</p>{{ end }}
+    </div>
+    {{ with .Params.virtual_note }}
+    <blockquote class="virtual-note">{{ . }}</blockquote>
+    {{ end }}
+  </div>
+</div>
+
+{{ with .Params.virtual_steps }}
+<div class="section-band band-sumi-soft virtual-join">
+  <div class="section-band-inner virtual-join-inner">
+    <div class="virtual-join-head">
+      <span class="contact-eyebrow">How to join</span>
+      <h2>Three steps to your first virtual class.</h2>
+    </div>
+    <div class="virtual-actions">
+      <a class="btn btn-primary" href="/contact/">Ask about virtual access</a>
+      <a class="btn btn-ghost" href="/schedule/">See the schedule</a>
+    </div>
+    <ol class="virtual-timeline">
+      {{ range $i, $s := . }}
+      <li>
+        <span class="vt-num">{{ add $i 1 }}</span>
+        <span class="vt-text">{{ $s }}</span>
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+</div>
+{{ end }}
+
+{{ with site.Params.youtube_url }}
+<a class="virtual-youtube-band" href="{{ . }}" target="_blank" rel="noopener">
+  <span class="vy-inner">
+    <span class="vy-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></svg></span>
+    <span class="vy-copy">
+      <span class="vy-label">YouTube</span>
+      <span class="vy-title">Watch the Virtual Dojo channel</span>
+    </span>
+    <span class="vy-cta">Visit the channel →</span>
+  </span>
+</a>
+{{ end }}
