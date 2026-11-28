@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ if .IsHome }}{{ site.Title }} — The Dojo Kun{{ else }}{{ .Title }} — {{ site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ site.Title }} — The Dōjō Kun{{ else }}{{ .Title }} — {{ site.Title }}{{ end }}</title>
 {{ $desc := .Description | default .Params.summary | default site.Params.description }}
 <meta name="description" content="{{ $desc }}">
 <link rel="canonical" href="{{ .Permalink }}">

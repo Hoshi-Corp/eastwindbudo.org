@@ -13,7 +13,7 @@ illustration: "karate"
 lineage:
   - name: "Higaonna Kanryō"
     dates: "1853 – 1915"
-    description: "Born in Naha, Okinawa. Higaonna travelled to Fuzhou, China in 1868 and trained fifteen years under master Ryu Ryu Ko before returning to Okinawa in 1881 to establish Naha-te. He's honored today as one of the founders of Okinawan karate."
+    description: "Born in Naha, Okinawa. Higaonna travelled to Fuzhou, China in 1868 and trained fifteen years under master Ryū Ryū Ko before returning to Okinawa in 1881 to establish Naha-te. He's honored today as one of the founders of Okinawan karate."
     photo: "/images/lineage/higaonna-kanryo.png"
     illustrative: true    # optional — shows "Illustrative portrait" caption + adjusted alt text
   - name: "Miyagi Chōjun"
@@ -23,7 +23,7 @@ lineage:
     illustrative: true    # optional — shows "Illustrative portrait" caption + adjusted alt text
   - name: "Miyazato Eiichi"
     dates: "1922 – 1999"
-    description: "A tenth-degree black belt who preserved the tradition at the Jundōkan dojo in Okinawa, and competed at a high level in both karate and judo."
+    description: "A tenth-degree black belt who preserved the tradition at the Jundōkan dōjō in Okinawa, and competed at a high level in both karate and jūdō."
     photo: "/images/lineage/eichi-miyazato.png"
   - name: "Taira Masaji"
     dates: "Contemporary"

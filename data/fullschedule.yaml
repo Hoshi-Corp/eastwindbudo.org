@@ -4,7 +4,7 @@ days:
     classes:
       - name: "Karate — Black Belt"
         time: "6:30 – 7:30 PM"
-      - name: "Kobudo — Black Belt"
+      - name: "Kobudō — Black Belt"
         time: "7:45 – 8:45 PM"
   - day: "Tuesday"
     classes:
@@ -27,7 +27,7 @@ days:
       - name: "Family Karate"
         time: "6:00 – 7:00 PM"
         note: "All levels"
-      - name: "Family Kobudo"
+      - name: "Family Kobudō"
         time: "7:15 – 8:15 PM"
         note: "All levels"
       - name: "Adult Karate"
@@ -37,7 +37,7 @@ days:
       - name: "Family Karate"
         time: "9:30 – 10:30 AM"
         note: "All levels"
-      - name: "Family Kobudo"
+      - name: "Family Kobudō"
         time: "10:45 – 11:45 AM"
         note: "All levels"
       - name: "Shaolin Kung Fu"
